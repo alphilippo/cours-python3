@@ -4,7 +4,7 @@ author: "Arnaud Calmettes (nohar)"
 papersize: a4paper
 documentclass: scrreprt
 classoption:
-    - 10pt
+    - 11pt
 header-includes:
     - \usepackage[french]{babel}
     - \usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
