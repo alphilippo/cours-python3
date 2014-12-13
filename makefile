@@ -1,6 +1,6 @@
 CC = pandoc
-FLAGS = -N --toc --chapters
-HTMLFLAGS = -s -t html5 -c default.css
+FLAGS = --toc --chapters
+HTMLFLAGS = -s -t html5 -c default.css -N
 DOCNAME = cours-python3
 SRCDIR = src
 SRCFILES = $(sort $(SRCDIR)/*.md)
@@ -15,7 +15,7 @@ pdf:
 
 html:
 	$(info $(DOCNAME).html)
-	@$(CC) -o $(DOCNAME).html $(SRCFILES) $(FLAGS) $(HTMLFLAGS)
+	@$(CC) -o index.html $(SRCFILES) $(FLAGS) $(HTMLFLAGS)
 
 epub:
 	$(info $(DOCNAME).epub)

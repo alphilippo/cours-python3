@@ -2,9 +2,12 @@
 title: Python 3 pour l'apprenti sorcier
 author: "Arnaud Calmettes (nohar)"
 papersize: a4paper
-documentclass: scrbook
+documentclass: scrreprt
+classoption:
+    - 10pt
 header-includes:
     - \usepackage[french]{babel}
+    - \usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
 ...
 
 # Avant-propos {.unnumbered}
