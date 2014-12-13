@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Arnaud Calmettes (nohar)">
+  <title>Python 3 pour l'apprenti sorcier</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+  <link rel="stylesheet" href="default.css">
+  
+  
+</head>
+<body>
+<header>
+<h1 class="title">Python 3 pour l'apprenti sorcier</h1>
+<h2 class="author">Arnaud Calmettes (nohar)</h2>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#avant-propos">Avant-propos</a></li>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#rencontre-du-troisième-type"><span class="toc-section-number">2</span> Rencontre du troisième type</a><ul>
+<li><a href="#contact"><span class="toc-section-number">2.1</span> Contact</a></li>
+<li><a href="#une-bête-de-calcul"><span class="toc-section-number">2.2</span> Une bête de calcul</a><ul>
+<li><a href="#saisir-un-nombre"><span class="toc-section-number">2.2.1</span> Saisir un nombre</a></li>
+<li><a href="#opérations-courantes"><span class="toc-section-number">2.2.2</span> Opérations courantes</a></li>
+</ul></li>
+<li><a href="#en-résumé"><span class="toc-section-number">2.3</span> En résumé</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="avant-propos" class="unnumbered"><a href="#avant-propos">Avant-propos</a></h1>
+<p>Vous désirez vous initier à l'art de la programmation, et je vous en félicite.</p>
+<p>Vous ne vous en doutez peut-être pas, mais vous êtes sur le seuil d'un nouveau monde, vaste et passionnant. Un monde qui regorge de formules, de recettes et d'objets magiques. Un monde dans lequel le périple que nous nous apprêtons à accomplir changera à jamais la vision que vous avez de l'univers et ouvrira votre esprit à de nouvelles façons de penser, de créer et de vous amuser.</p>
+<p>Oh, c'est cela, riez. Riez donc, innocent que vous êtes ! Je vois bien que vous ne me croyez pas, mais je vous l'affirme : la programmation tient autant de la magie que de la science, et si vous êtes assez brave pour me suivre, <em>je vais vous le montrer</em>.</p>
+<p>...</p>
+<p>Bon, OK, j'exagère peut-être un <em>tout petit</em> peu.</p>
+<p>En fait, nous n'allons pas partir en voyage ni braver le danger. Promis. Vous allez simplement suivre un cours en toute sécurité et pas à pas, sans bouger de votre fauteuil. Vous êtes rassuré ?</p>
+<p>À part ça, <strong>tout ce que je vous ai dit d'autre est vrai !</strong></p>
+<h1 id="introduction"><a href="#introduction"><span class="header-section-number">1</span> Introduction</a></h1>
+<pre><code>TODO</code></pre>
+<h1 id="rencontre-du-troisième-type"><a href="#rencontre-du-troisième-type"><span class="header-section-number">2</span> Rencontre du troisième type</a></h1>
+<blockquote>
+<p>Le renard se tut et regarda longtemps le petit prince :</p>
+<p>-- S'il te plaît... apprivoise-moi ! dit-il.</p>
+<p>-- Je veux bien, répondit le petit prince, mais je n'ai pas beaucoup de temps. J'ai des amis à découvrir et beaucoup de choses à connaître.</p>
+<p>-- On ne connaît que les choses que l'on apprivoise, dit le renard.</p>
+</blockquote>
+<blockquote>
+<p><em>Antoine de Saint-Exupéry -- Le Petit Prince</em></p>
+</blockquote>
+<p>Maintenant qu'un Python habite dans votre ordinateur, il est temps de faire sa connaissance. Dans ce chapitre, nous allons visiter son habitat naturel : la console interactive, que vous utiliserez tout le temps pour tester vos programmes. Ce sera votre lieu de rencontre privilégié, puisque c'est ici que vous pourrez <em>dialoguer</em> avec lui.</p>
+<p>Suivez moi ! Il nous attend déjà.</p>
+<h2 id="contact"><a href="#contact"><span class="header-section-number">2.1</span> Contact</a></h2>
+<p>Nous voici devant l'antre de la bête.</p>
+<p>Commençons par l'appeler, si vous le voulez bien. Pour cela, lancez l'interpréteur de commandes Python comme je vous l'ai montré dans le chapitre précédent (en tapant &quot;<code>python3</code>&quot; ou bien &quot;<code>py -3</code>&quot; dans votre console, suivant votre système d'exploitation).</p>
+<p>Sa queue se déroule dans la console, et le voilà qui vous fixe de ses grands yeux verts :</p>
+<pre class="sourceCode python"><code class="sourceCode python">Python <span class="fl">3.4.0</span> (default, Apr <span class="dv">11</span> <span class="dv">2014</span>, <span class="dv">13</span>:<span class="dv">05</span>:<span class="dv">11</span>)
+[GCC <span class="fl">4.8.2</span>] on linux
+Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> or <span class="st">&quot;license&quot;</span> <span class="kw">for</span> more information.
+&gt;&gt;&gt;</code></pre>
+<p>Ces trois chevrons (<code>&gt;&gt;&gt;</code>) constituent <strong>l'invite de commande</strong>. C'est la façon dont Python vous signale qu'il vous écoute et qu'il attend vos instructions. Montrez-vous bien élevé, saluez-le et validez en appuyant sur la touche <code>Entrée</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; Bonjour
+Traceback:
+  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, in &lt;module&gt;
+<span class="ot">NameError</span>: name <span class="st">&#39;Bonjour&#39;</span> is not defined</code></pre>
+<p>Ouh là, attention, reculez ! Vous l'avez contrarié.</p>
+<p>Ce que Python vient de vous cracher au visage, c'est un message qui signifie qu'il n'a pas compris ce que vous lui dites. En effet, pour créer un programme, il ne suffit pas de donner des ordres en français à votre interpréteur. Il faut que vous lui parliez <strong>en Python</strong>, et c'est justement ce que vous êtes venu apprendre.</p>
+<p>Pour le moment je vais vous aider. Entourez donc votre phrase avec des guillemets (<code>&quot;</code>), comme ceci :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;Bonjour&quot;</span>
+<span class="co">&#39;Bonjour&#39;</span></code></pre>
+<p>Le voilà plus coopératif. Python vous a renvoyé la politesse. Poursuivons :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;Je m&#39;appelle Arnaud. Et toi ?&quot;</span>
+<span class="co">&quot;Je m&#39;appelle Arnaud. Et toi ?&quot;</span>
+&gt;&gt;&gt; <span class="st">&quot;Mais, je te l&#39;ai déjà dit...&quot;</span>
+<span class="co">&quot;Mais, je te l&#39;ai déjà dit...&quot;</span>
+&gt;&gt;&gt; <span class="st">&quot;Hé ! Tu arrêtes de répéter tout ce que je dis ?!&quot;</span>
+<span class="co">&#39;Hé ! Tu arrêtes de répéter tout ce que je dis ?!&#39;</span></code></pre>
+<p>Rassurez-vous : aussi taquin soit-il, Python n'est pas vraiment en train de se moquer de vous. Laissez-moi vous expliquer.</p>
+<p>Le rôle de cette console interactive est d'<strong>interpréter</strong> les instructions que vous lui soumettez. Chaque fois que vous appuyez sur <code>Entrée</code>, vous envoyez l'expression que vous venez de taper à Python, celui-ci l'évalue et vous retourne <em>sa valeur</em>. Jusqu'ici, vous lui avez envoyé des expressions qui ont toutes la même forme : du texte entouré de guillemets. Il s'agit de données de base que peut manipuler l'interpréteur et que l'on appelle des <em>chaînes de caractères</em>. Python s'est contenté d'évaluer ces données, et de vous retourner leurs valeurs telles qu'il les a comprises, c'est-à-dire qu'il vous a renvoyé les chaînes telles quelles.</p>
+<p>Nous reparlerons très bientôt des chaînes de caractères. Pour l'heure, si nous essayions de lui faire évaluer des choses plus utiles ?</p>
+<h2 id="une-bête-de-calcul"><a href="#une-bête-de-calcul"><span class="header-section-number">2.2</span> Une bête de calcul</a></h2>
+<p>Je vous ai dit que la console interactive sert à <em>évaluer des expressions</em>, mais que sont ces fameuses « expressions » ? Nous allons commencer à le découvrir dans la suite de ce chapitre.</p>
+<h3 id="saisir-un-nombre"><a href="#saisir-un-nombre"><span class="header-section-number">2.2.1</span> Saisir un nombre</a></h3>
+<p>Vous avez pu voir juste au-dessus que Python n'aime pas du tout les suites de lettres qu'il ne comprend pas. Par contre, non seulement il comprend très bien les nombres, mais en plus, il les adore !</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">42</span>
+<span class="dv">42</span></code></pre>
+<p>Vous pouvez même saisir des nombres à virgule, regardez :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="fl">13.37</span>
+<span class="fl">13.37</span></code></pre>
+<blockquote>
+<p><strong>On utilise ici la notation anglo-saxonne, c'est-à-dire que le point remplace la virgule. La virgule a un tout autre sens pour Python, que nous découvrirons plus loin.</strong></p>
+</blockquote>
+<p>En programmation, ces nombres à virgules sont appelé des <strong>flottants</strong>. Ils ne sont pas représentés de la même façon dans la mémoire de l'ordinateur que les nombres entiers. Ainsi, même si leurs valeurs sont égales, sachez que <code>5</code> n'est pas tout à fait la même chose que <code>5.0</code>.</p>
+<p>Il va de soi que l'on peut tout aussi bien saisir des nombres négatifs. Essayez. ;)</p>
+<p>D'accord, ce n'est pas extraordinaire. On saisit un nombre et Python le répète : la belle affaire ! Néanmoins, ce n'est pas aussi inutile que vous pourriez le penser. Le fait qu'il nous renvoie une valeur signifie que Python a bien compris <strong>la forme</strong> et <strong>le sens</strong> de ce que vous avez saisi. Autrement dit, cela signifie que <em>les expressions</em> que vous avez tapées sont <strong>valides</strong> dans le langage Python, donc que vous pouvez utiliser cette console pour vérifier la validité d'une expression en cas de doute.</p>
+<blockquote>
+<p><strong>Un peu de vocabulaire :</strong></p>
+<p>L'ensemble de règles qui déterminent <em>la forme</em> des expressions acceptées par un langage de programmation constitue la <strong>syntaxe</strong> de ce langage. <em>Le sens</em> de ces expressions, quant à lui, est déterminé par sa <strong>sémantique</strong>.</p>
+</blockquote>
+<p>Nous avons maintenant un première observation à retenir : les nombres, tout comme les chaînes de caractères (<code>&quot;Bonjour&quot;</code>), sont des expressions valides en Python. Ces expressions désignent <strong>des données</strong> que l'on peut manipuler dans ce langage.</p>
+<h3 id="opérations-courantes"><a href="#opérations-courantes"><span class="header-section-number">2.2.2</span> Opérations courantes</a></h3>
+<p>Maintenant que nous savons que Python comprend les nombres, voyons un peu ce qu'il est capable de faire avec.</p>
+<h4 id="addition-soustraction-multiplication-division"><a href="#addition-soustraction-multiplication-division"><span class="header-section-number">2.2.2.1</span> Addition, soustraction, multiplication, division</a></h4>
+<p>Pour effectuer ces opérations, on utilise respectivement les symboles <code>+</code>, <code>-</code>, <code>*</code> et <code>/</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">3</span> + <span class="dv">4</span>
+<span class="dv">7</span>
+&gt;&gt;&gt; -<span class="dv">2</span> + <span class="dv">93</span>
+<span class="dv">91</span>
+&gt;&gt;&gt; <span class="fl">9.5</span> - <span class="dv">2</span>
+<span class="fl">7.5</span>
+&gt;&gt;&gt; <span class="fl">3.11</span> + <span class="fl">2.08</span>
+<span class="fl">5.1899999999999995</span></code></pre>
+<blockquote>
+<p><em>Pourquoi le dernier résultat est-il approximatif ?</em></p>
+</blockquote>
+<p>Python n'y est pas pour grand chose. En fait, cela vient de la façon dont les nombres flottants sont représentés dans la mémoire de votre ordinateur. Pour que tous les nombres à virgule aient une taille fixe en mémoire, ceux-ci sont représentés avec un nombre limité de chiffres significatifs, ce qui impose à l'ordinateur de faire des approximations parfois un peu déroutantes.</p>
+<p>Cependant, vous remarquerez que l'erreur (à 0.000000000000001 près) est infime et qu'elle n'aura pas de gros impact sur les calculs. Les applications qui ont besoin d'une précision mathématique à toute épreuve peuvent pallier ce défaut par d'autres moyens. Ici, ce ne sera pas nécessaire.</p>
+<p>Faites également des tests pour la multiplication et la division : il n'y a rien de difficile.</p>
+<h4 id="division-entière-et-modulo"><a href="#division-entière-et-modulo"><span class="header-section-number">2.2.2.2</span> Division entière et modulo</a></h4>
+<p>Si vous avez pris le temps de tester la division, vous vous êtes rendu compte que le résultat est donné avec une virgule.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">10</span> / <span class="dv">5</span>
+<span class="fl">2.0</span>
+&gt;&gt;&gt; <span class="dv">10</span> / <span class="dv">3</span>
+<span class="fl">3.3333333333333335</span>
+&gt;&gt;&gt;</code></pre>
+<p>En d'autres termes, quelles que soient ses opérandes, la division de Python donnera toujours son résultat sous la forme d'un flottant. Il existe deux autres opérateurs qui permettent de connaître respectivement le résultat d'une <em>division euclidienne</em> et le reste de cette division.</p>
+<p>La division euclidienne, c'est celle que vous apprenez à poser à l'école. Rappelons rapidement sa définition : la division euclidienne de <span class="math"><em>a</em></span> par <span class="math"><em>b</em></span> est l'opération qui consiste à trouver le <em>quotient</em> <span class="math"><em>q</em></span> et le <em>reste</em> <span class="math"><em>r</em></span> tel que <span class="math">0 ≤ <em>r</em> &lt; <em>b</em></span>, vérifiant :</p>
+<p><br /><span class="math"><em>a</em> = <em>q</em> × <em>b</em> + <em>r</em></span><br /></p>
+<p>L'exemple ci-dessous montre que la division euclidienne de <span class="math">10</span> par <span class="math">3</span> a pour quotient <span class="math">3</span> et pour reste <span class="math">1</span>. Soit <span class="math">10 = 3 × 3 + 1</span>.</p>
+<pre><code>    10 | 3
+       +---
+     1 | 3
+       |</code></pre>
+<p>L'opérateur permettant d'obtenir le quotient d'une division euclidienne est appelé « division entière ». On le note avec le symbole <code>//</code>.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">10</span> // <span class="dv">3</span>
+<span class="dv">3</span></code></pre>
+<p>L'opérateur <code>%</code>, que l'on appelle le « modulo », permet de connaître le reste de cette division.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">10</span> % <span class="dv">3</span>
+<span class="dv">1</span></code></pre>
+<h4 id="puissance"><a href="#puissance"><span class="header-section-number">2.2.2.3</span> Puissance</a></h4>
+<p>Si vous êtes curieux, vous avez probablement déjà essayé de calculer une <em>puissance</em> avec Python, de la même façon que vous auriez utilisé une calculatrice. Sur cette dernière, vous vous souvenez certainement que l'opérateur de puissance correspond à la touche &quot;<code>^</code>&quot;. Essayons !</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">3</span> ^ <span class="dv">2</span>
+<span class="dv">1</span></code></pre>
+<p>En voilà, un résultat bizarre. Tout le monde sait bien que <span class="math">3<sup>2</sup> = 9</span> ! o_O</p>
+<p>Rassurez-vous. Python le sait également. C'est simplement que l'opérateur <code>^</code> ne désigne pas une puissance pour lui, mais une toute autre opération qui porte le nom barbare de « XOR bit-à-bit » et que vous pouvez vous empresser d'oublier pour le moment.</p>
+<p>L'opérateur de puissance, quant à lui, se note <code>**</code>. Regardez :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">3</span> ** <span class="dv">2</span>
+<span class="dv">9</span></code></pre>
+<p>Vous pouvez même vous en servir pour calculer une puissance qui n'est pas entière. Par exemple, une racine carrée (rappelez-vous que <span class="math">$\sqrt{x} = x^{\frac{1}{2}}$</span>) :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">25</span> ** (<span class="dv">1</span>/<span class="dv">2</span>)
+<span class="fl">5.0</span></code></pre>
+<p>Notez que le résultat nous est donné sous la forme d'un nombre à virgule, puisque l'un des deux opérandes, <code>1/2</code>, n'est pas une valeur entière.</p>
+<p>Tout cela nous amène à deux nouvelles observations. La première, c'est qu'en plus des nombres, les expressions mathématiques sont également des expressions valides en Python.</p>
+<p>La seconde, c'est que votre nouvel ami serpent est un génie en calcul mental. Cela n'a rien d'étonnant ; souvenez-vous que la principale fonction d'un programme (donc d'un langage de programmation) est de nous permettre à nous, humains, de faire faire des calculs à un ordinateur. En fait, pour lui, <em>toute instruction est un calcul à effectuer</em>, y compris, évidemment, les petites opérations de calcul mental que nous venons de lui soumettre.</p>
+<h2 id="en-résumé"><a href="#en-résumé"><span class="header-section-number">2.3</span> En résumé</a></h2>
+<p>Récapitulons ce que nous avons appris dans ce premier chapitre.</p>
+<ul>
+<li>L'invite de commandes Python permet de tester du code au fur et à mesure qu'on l'écrit.</li>
+<li>Python est capable d'effectuer des calculs, exactement comme une calculatrice.</li>
+<li>Un nombre décimal s'écrit avec un point et non une virgule. Les calculs impliquant des nombres décimaux donnent parfois des résultats approximatifs.</li>
+<li>Python différencie la <em>division réelle</em> (<code>/</code>) de la <em>division euclidienne</em> (<code>//</code> et <code>%</code>).</li>
+</ul>
+<p>Plus important encore, en termes de vocabulaire :</p>
+<ul>
+<li>Les chaînes de caractères (comme <code>&quot;Salut !&quot;</code>) et les nombres sont des <strong>expressions valides</strong> en Python.</li>
+<li>La forme des expressions acceptées par un langage de programmation est sa <strong>syntaxe</strong>.</li>
+<li>Le sens que donne le langage aux expressions qu'il accepte est sa <strong>sémantique</strong>.</li>
+</ul>
+<p>Bien entendu, Python est bien plus qu'une simple calculatrice. Vous allez très vite vous en rendre compte dans les prochains chapitres.</p>
+</body>
+</html>
