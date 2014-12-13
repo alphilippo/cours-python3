@@ -379,7 +379,7 @@ Traceback:
 <span class="dv">8</span>
 &gt;&gt;&gt; <span class="bn">0o755</span>
 <span class="dv">493</span></code></pre>
-<p>Python comprendra tous ces nombres comme des entiers. Seule la notation change, pas leur type.</p>
+<p>` Python comprendra tous ces nombres comme des entiers. Seule la notation change, pas leur type.</p>
 </blockquote>
 <p>Enfin, si vous savez déjà programmer dans un autre langage, il est possible que vous vous demandiez quelles sont <em>les bornes</em> (les valeurs minimale et maximale) des entiers. Sachez qu'en Python, les entiers ne sont pas bornés : tant que vous disposez de suffisamment de mémoire pour les faire tenir dedans, Python est capable de représenter des entiers indéfiniment grands ou petits.</p>
 <p>Vous ne me croyez pas ? Eh bien, demandez-lui donc de calculer <code>123456789 ** 500</code> ; vous verrez si je vous raconte des bobards !</p>
@@ -403,8 +403,42 @@ Traceback:
 <p>La seconde solution, c'est d'<em>échapper</em> les guillemets contenus dans la chaîne, en utilisant le symbole <em>anti-slash</em> (<code>\</code>), comme ceci :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;</span><span class="ch">\&quot;</span><span class="st">Diantre !</span><span class="ch">\&quot;</span><span class="st"> dis-je.&quot;</span>
 <span class="co">&#39;&quot;Diantre !&quot; dis-je.&#39;</span></code></pre>
-<p>Ce symbole <code>\</code> sert à introduire un caractère spécial dans les chaînes. Ici, les guillemets ont ceci de spécial qu'ils <em>ne servent pas à délimiter une chaîne</em>. Cela dit, vous remarquerez que ceci fait de l'anti-slash un symbole spécial lui-même : pour l'afficher dans une chaîne, il faut l'échapper.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="co">&quot;Je vous offre un anti-slash : \\&quot;</span></code></pre>
+<p>Ce symbole <code>\</code> sert à introduire un caractère spécial dans les chaînes. Ici, les guillemets ont ceci de spécial qu'ils <em>ne servent pas à délimiter une chaîne</em>. C'est exactement la même chose lorsque vous souhaîtez échapper une apostrophe dans une chaîne délimitée par des guillemets simples :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&#39;Python, c</span><span class="ch">\&#39;</span><span class="st">est coolympique !&#39;</span>
+<span class="co">&quot;Python, c&#39;est coolympique !&quot;</span></code></pre>
+<p>Regardez la réaction de Python sur le dernier exemple. Pour éviter d'échapper l'apostrophe, il a choisi de délimiter la chaîne avec des guillemets doubles, pour une fois. <em>Essayez de le piéger en saisissant une chaîne qui contient à la fois des guillemets et des apostrophes, pour voir.</em></p>
+<p>Notez également que l'anti-slash est lui-même un caractère spécial : pour l'incorporer dans une chaîne, il faut parfois l'échapper, même si Python est assez intelligent pour se rendre compte quand ce n'est pas nécessaire.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;ceci \ est un anti-slash&quot;</span>
+<span class="co">&#39;ceci \\ est un anti-slash&#39;</span>
+&gt;&gt;&gt; <span class="st">&quot;je vous offre un anti-slash: </span><span class="ch">\&quot;</span>
+<span class="st">  File &quot;</span>&lt;stdin&gt;<span class="st">&quot;, line 1</span>
+<span class="st">    &quot;</span>je vous offre un anti-slash: \<span class="st">&quot;</span>
+<span class="st">                                   ^</span>
+<span class="st">SyntaxError: EOL while scanning string literal</span></code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;je vous offre un anti-slash: </span><span class="ch">\\</span><span class="st">&quot;</span>
+<span class="co">&#39;je vous offre un anti-slash: \\&#39;</span></code></pre>
+<blockquote>
+<p><em>Et si je veux écrire une chaîne qui fasse plusieurs lignes ?</em></p>
+</blockquote>
+<p>Pour cela, vous avez encore deux alternatives. La première et... d'accord, j'arrête avec cette blague.</p>
+<p>La première alternative, c'est d'utiliser le caractère spécial <code>\n</code>, qui représente un <em>retour à la ligne</em>.</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;voici une chaîne</span><span class="ch">\n</span><span class="st">sur plusieurs lignes&quot;</span>
+<span class="co">&#39;voici une chaîne\nsur plusieurs lignes&#39;</span></code></pre>
+<blockquote>
+<p><em>Hé, mais ça marche pas !</em></p>
+</blockquote>
+<p>Si si, ça fonctionne. Regardez :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">print</span>(<span class="st">&quot;voici une chaîne</span><span class="ch">\n</span><span class="st">sur plusieurs lignes&quot;</span>)
+voici une chaîne
+sur plusieurs lignes</code></pre>
+<p>Nous verrons plus tard à quoi sert ce &quot;<code>print</code>&quot;. Remarquez simplement que l'affichage correspond bien à ce que nous voulions.</p>
+<p>La seconde alternative, c'est d'entourer notre chaîne avec des <em>triples guillemets</em> (<code>&quot;&quot;&quot;</code>) ou des <em>triples apostrophes</em>.</p>
+<p>Essayons :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;&quot;&quot;voici une chaîne</span>
+<span class="st">... sur plusieurs lignes&quot;&quot;&quot;</span>
+<span class="co">&#39;voici une chaîne\nsur plusieurs lignes&#39;</span></code></pre>
+<p>Les trois points (<code>...</code>) qui s'affichent dans cet exemple sont un indice visuel de la console Python qui signifient que la saisie n'est pas terminée, et qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici, j'ai tapé <code>&quot;&quot;&quot;voici une chaîne</code>, &quot;<code>Entrée</code>&quot;, <code>sur plusieurs lignes&quot;&quot;&quot;</code>.</p>
+<p>Si vous utilisez la console IDLE, ces trois points n'apparaîtront pas. Ne soyez donc pas dérouté par la différence d'affichage avec les exemples du cours.</p>
 <section class="footnotes">
 <hr />
 <ol>

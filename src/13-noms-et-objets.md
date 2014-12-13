@@ -254,10 +254,10 @@ notations pour désigner des entiers. Si les notions de *notation binaire* ou
 *hexadécimale* ne vous disent rien, vous pouvez sauter le paragraphe suivant.
 
 > Dans beaucoup de langages de programmation, les nombres peuvent être
-représentés selon différents systèmes de numération.
+> représentés selon différents systèmes de numération.
 >
 > Par exemple, on peut les noter sous leur forme binaire en préfixant la valeur
-de `0b` :
+> de `0b` :
 >
 > ```python
 > >>> 0b10
@@ -286,6 +286,7 @@ de `0b` :
 > 493
 > ```
 >
+> `
 > Python comprendra tous ces nombres comme des entiers. Seule la notation
 change, pas leur type.
 
@@ -295,8 +296,8 @@ maximale) des entiers. Sachez qu'en Python, les entiers ne sont pas bornés :
 tant que vous disposez de suffisamment de mémoire pour les faire tenir dedans,
 Python est capable de représenter des entiers indéfiniment grands ou petits.
 
-Vous ne me croyez pas ? Eh bien, demandez-lui donc de calculer `123456789 **
-500` ; vous verrez si je vous raconte des bobards !
+Vous ne me croyez pas ? Eh bien, demandez-lui donc de calculer
+`123456789 ** 500` ; vous verrez si je vous raconte des bobards !
 
 #### Les nombres flottants
 
@@ -372,11 +373,80 @@ en utilisant le symbole *anti-slash* (`\`), comme ceci :
 
 Ce symbole `\` sert à introduire un caractère spécial dans les chaînes. Ici,
 les guillemets ont ceci de spécial qu'ils *ne servent pas à délimiter une
-chaîne*. Cela dit, vous remarquerez que ceci fait de l'anti-slash un symbole
-spécial lui-même : pour l'afficher dans une chaîne,  il faut l'échapper.
+chaîne*. C'est exactement la même chose lorsque vous souhaîtez échapper une
+apostrophe dans une chaîne délimitée par des guillemets simples :
 
 ```python
-"Je vous offre un anti-slash : \\"
+>>> 'Python, c\'est coolympique !'
+"Python, c'est coolympique !"
 ```
+
+Regardez la réaction de Python sur le dernier exemple. Pour éviter d'échapper
+l'apostrophe, il a choisi de délimiter la chaîne avec des guillemets doubles,
+pour une fois. *Essayez de le piéger en saisissant une chaîne qui contient
+à la fois des guillemets et des apostrophes, pour voir.*
+
+Notez également que l'anti-slash est lui-même un caractère spécial : pour
+l'incorporer dans une chaîne, il faut parfois l'échapper, même si Python est
+assez intelligent pour se rendre compte quand ce n'est pas nécessaire.
+
+```python
+>>> "ceci \ est un anti-slash"
+'ceci \\ est un anti-slash'
+>>> "je vous offre un anti-slash: \"
+  File "<stdin>", line 1
+    "je vous offre un anti-slash: \"
+                                   ^
+SyntaxError: EOL while scanning string literal
+```
+```python
+>>> "je vous offre un anti-slash: \\"
+'je vous offre un anti-slash: \\'
+```
+
+> *Et si je veux écrire une chaîne qui fasse plusieurs lignes ?*
+
+Pour cela, vous avez encore deux alternatives. La première et... d'accord,
+j'arrête avec cette blague. 
+
+La première alternative, c'est d'utiliser le caractère spécial `\n`, qui
+représente un *retour à la ligne*.
+
+```python
+>>> "voici une chaîne\nsur plusieurs lignes"
+'voici une chaîne\nsur plusieurs lignes'
+```
+
+> *Hé, mais ça marche pas !*
+
+Si si, ça fonctionne. Regardez :
+
+```python
+>>> print("voici une chaîne\nsur plusieurs lignes")
+voici une chaîne
+sur plusieurs lignes
+```
+
+Nous verrons plus tard à quoi sert ce "`print`". Remarquez simplement que
+l'affichage correspond bien à ce que nous voulions.
+
+La seconde alternative, c'est d'entourer notre chaîne avec des *triples
+guillemets* (`"""`) ou des *triples apostrophes*.
+
+Essayons : 
+
+```python
+>>> """voici une chaîne
+... sur plusieurs lignes"""
+'voici une chaîne\nsur plusieurs lignes'
+```
+
+Les trois points (`...`) qui s'affichent dans cet exemple sont un indice visuel
+de la console Python qui signifient que la saisie n'est pas terminée, et
+qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici,
+j'ai tapé `"""voici une chaîne`, "`Entrée`", `sur plusieurs lignes"""`.
+
+Si vous utilisez la console IDLE, ces trois points n'apparaîtront pas. Ne soyez
+donc pas dérouté par la différence d'affichage avec les exemples du cours.
 
 
