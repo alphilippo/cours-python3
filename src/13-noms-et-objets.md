@@ -20,6 +20,8 @@ Dans ce chapitre, nous allons apprendre :
 
 ## Les variables
 
+### Des étiquettes pour s'y retrouver
+
 En Python, une variable n'est rien d'autre qu'un **nom** que l'on donne à un
 objet pour se souvenir de lui et le manipuler. Regardez :
 
@@ -219,7 +221,7 @@ manipule dans un programme**.
 Et la première caractéristique d'un objet, c'est son **type**. On parle
 également de « type de données ».
 
-### Plusieurs types d'objets
+### Plusieurs types de données
 
 Vous serez d'accord avec moi si je vous dis qu'une éponge et un tournevis ne
 sont absolument pas la même chose. Pourtant, ce sont deux objets, non ? Eh bien
@@ -234,8 +236,8 @@ mange des ours"`.
 > __Le type d'un objet, c'est ce qui définit ses caractéristiques : à quoi il
 ressemble, comment on l'utilise, à quoi il sert... bref, ce qu'il *est*.__
 
-Jusqu'ici, vous avez croisé trois types d'objets différents. Prenons le temps
-de les examiner de plus près, si vous le voulez bien.
+Jusqu'ici, vous avez croisé des objets de trois types différents. Prenons le
+temps de les examiner de plus près, si vous le voulez bien.
 
 #### Les nombres entiers
 
@@ -427,7 +429,7 @@ voici une chaîne
 sur plusieurs lignes
 ```
 
-Nous verrons plus tard à quoi sert ce "`print`". Remarquez simplement que
+Nous verrons juste après à quoi sert ce "`print`". Remarquez simplement que
 l'affichage correspond bien à ce que nous voulions.
 
 La seconde alternative, c'est d'entourer notre chaîne avec des *triples
@@ -444,9 +446,54 @@ Essayons :
 Les trois points (`...`) qui s'affichent dans cet exemple sont un indice visuel
 de la console Python qui signifient que la saisie n'est pas terminée, et
 qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici,
-j'ai tapé `"""voici une chaîne`, "`Entrée`", `sur plusieurs lignes"""`.
+j'ai tapé `"""voici une chaîne`, `<Entrée>`, `sur plusieurs lignes"""`.
 
 Si vous utilisez la console IDLE, ces trois points n'apparaîtront pas. Ne soyez
 donc pas dérouté par la différence d'affichage avec les exemples du cours.
 
+### D'autres types d'objets
+
+Juste un peu plus haut, je vous ai montré un exemple bizarre où j'ai écrit
+`print('une chaîne')`. Qu'est-ce que c'est que ce `print` ?
+
+La première observation que l'on peut faire, c'est que `print` est un nom que
+Python reconnaît :
+
+```python
+>>> print
+<built-in function print>
+```
+
+Ce que l'interpréteur vient de répondre, c'est que `print` est une *fonction*.
+C'est-à-dire un objet qui sert à *faire quelque chose*.
+
+Pour utiliser une fonction, il faut l'*appeler*. Pour cela, il faut accoller des
+parenthèses après son nom :
+
+```python
+>>> print()
+
+>>>
+```
+
+> *Mais... il ne s'est rien passé ?!*
+
+Si si, regardez plus attentivement : Python a sauté une ligne. En fait, l'appel
+`print()` affiche une ligne vide. Essayons autre chose :
+
+```python
+>>> print("Bonjour !")
+Bonjour !
+>>> x = 2 + 2
+>>> print("x =", x)
+x = 4
+``` 
+
+Cette fois, nous avons passé *un argument* à la fonction `print` (la chaîne
+`"Bonjour !"`), et le résultat affiché est le contenu de cette chaîne. Puis
+nous lui avons passé deux objets (la chaîne `"x ="` et le nombre étiqueté par
+la variable `x`) et celui-ci les a affichés à la suite.
+
+Vous l'aurez deviné ; la fonction `print(...)` sert à afficher ses arguments à
+l'écran.
 

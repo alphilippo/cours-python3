@@ -54,10 +54,12 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </ul></li>
 <li><a href="#des-noms-et-des-objets"><span class="toc-section-number">3</span> Des noms et des objets</a><ul>
 <li><a href="#les-variables"><span class="toc-section-number">3.1</span> Les variables</a><ul>
-<li><a href="#un-peu-de-syntaxe"><span class="toc-section-number">3.1.1</span> Un peu de syntaxe</a></li>
+<li><a href="#des-étiquettes-pour-sy-retrouver"><span class="toc-section-number">3.1.1</span> Des étiquettes pour s'y retrouver</a></li>
+<li><a href="#un-peu-de-syntaxe"><span class="toc-section-number">3.1.2</span> Un peu de syntaxe</a></li>
 </ul></li>
 <li><a href="#cest-lhistoire-dun-type..."><span class="toc-section-number">3.2</span> C'est l'histoire d'un type...</a><ul>
-<li><a href="#plusieurs-types-dobjets"><span class="toc-section-number">3.2.1</span> Plusieurs types d'objets</a></li>
+<li><a href="#plusieurs-types-de-données"><span class="toc-section-number">3.2.1</span> Plusieurs types de données</a></li>
+<li><a href="#dautres-types-dobjets"><span class="toc-section-number">3.2.2</span> D'autres types d'objets</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -92,7 +94,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 [GCC <span class="fl">4.8.2</span>] on linux
 Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> or <span class="st">&quot;license&quot;</span> <span class="kw">for</span> more information.
 &gt;&gt;&gt;</code></pre>
-<p>Ces trois chevrons (<code>&gt;&gt;&gt;</code>) constituent <strong>l'invite de commande</strong>. C'est la façon dont Python vous signale qu'il vous écoute et qu'il attend vos instructions. Montrez-vous bien élevé, saluez-le et validez en appuyant sur la touche <code>Entrée</code>.</p>
+<p>Ces trois chevrons (<code>&gt;&gt;&gt;</code>) constituent <strong>l'invite de commande</strong>. C'est la façon dont Python vous signale qu'il vous écoute et qu'il attend vos instructions. Montrez-vous bien élevé, saluez-le et validez en appuyant sur la touche <code>&lt;Entrée&gt;</code>.</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; Bonjour
 Traceback:
   File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, in &lt;module&gt;
@@ -110,7 +112,7 @@ Traceback:
 &gt;&gt;&gt; <span class="st">&quot;Hé ! Tu arrêtes de répéter tout ce que je dis ?!&quot;</span>
 <span class="co">&#39;Hé ! Tu arrêtes de répéter tout ce que je dis ?!&#39;</span></code></pre>
 <p>Rassurez-vous : aussi taquin soit-il, Python n'est pas vraiment en train de se moquer de vous. Laissez-moi vous expliquer.</p>
-<p>Le rôle de cette console interactive est d'<strong>interpréter</strong> les instructions que vous lui soumettez. Chaque fois que vous appuyez sur <code>Entrée</code>, vous envoyez l'expression que vous venez de taper à Python, celui-ci l'évalue et vous retourne <em>sa valeur</em>. Jusqu'ici, vous lui avez envoyé des expressions qui ont toutes la même forme : du texte entouré de guillemets. Il s'agit de données de base que peut manipuler l'interpréteur et que l'on appelle des <em>chaînes de caractères</em>. Python s'est contenté d'évaluer ces données, et de vous retourner leurs valeurs telles qu'il les a comprises, c'est-à-dire qu'il vous a renvoyé les chaînes telles quelles.</p>
+<p>Le rôle de cette console interactive est d'<strong>interpréter</strong> les instructions que vous lui soumettez. Chaque fois que vous appuyez sur <code>&lt;Entrée&gt;</code>, vous envoyez l'expression que vous venez de taper à Python, celui-ci l'évalue et vous retourne <em>sa valeur</em>. Jusqu'ici, vous lui avez envoyé des expressions qui ont toutes la même forme : du texte entouré de guillemets. Il s'agit de données de base que peut manipuler l'interpréteur et que l'on appelle des <em>chaînes de caractères</em>. Python s'est contenté d'évaluer ces données, et de vous retourner leurs valeurs telles qu'il les a comprises, c'est-à-dire qu'il vous a renvoyé les chaînes telles quelles.</p>
 <p>Nous reparlerons très bientôt des chaînes de caractères. Pour l'heure, si nous essayions de lui faire évaluer des choses plus utiles ?</p>
 <h2 id="une-bête-de-calcul"><a href="#une-bête-de-calcul"><span class="header-section-number">2.2</span> Une bête de calcul</a></h2>
 <p>Je vous ai dit que la console interactive sert à <em>évaluer des expressions</em>, mais que sont ces fameuses « expressions » ? Nous allons commencer à le découvrir dans la suite de ce chapitre.</p>
@@ -217,6 +219,7 @@ Traceback:
 <li>que d'autres sont des <em>actions</em>.</li>
 </ul>
 <h2 id="les-variables"><a href="#les-variables"><span class="header-section-number">3.1</span> Les variables</a></h2>
+<h3 id="des-étiquettes-pour-sy-retrouver"><a href="#des-étiquettes-pour-sy-retrouver"><span class="header-section-number">3.1.1</span> Des étiquettes pour s'y retrouver</a></h3>
 <p>En Python, une variable n'est rien d'autre qu'un <strong>nom</strong> que l'on donne à un objet pour se souvenir de lui et le manipuler. Regardez :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; x = <span class="dv">40</span>
 &gt;&gt;&gt; x
@@ -249,7 +252,7 @@ Traceback:
 <p><em>Nous vous demandons d'étiqueter convenablement tous vos bagages. Tout colis ou objet abandonné sera systématiquement détruit.</em><a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
 </blockquote>
 <p>En résumé : si vous comptez utiliser un objet, nommez-le !</p>
-<h3 id="un-peu-de-syntaxe"><a href="#un-peu-de-syntaxe"><span class="header-section-number">3.1.1</span> Un peu de syntaxe</a></h3>
+<h3 id="un-peu-de-syntaxe"><a href="#un-peu-de-syntaxe"><span class="header-section-number">3.1.2</span> Un peu de syntaxe</a></h3>
 <p>Ce simple mécanisme de <em>nommage</em> est tellement utilisé en Python que celui-ci propose un certain nombre de raccourcis pour définir, modifier ou supprimer des variables.</p>
 <p>Comme nous venons de le voir, on affecte un objet à une variable en utilisant le symbole <code>=</code>.</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; langage = <span class="st">&quot;Python&quot;</span></code></pre>
@@ -349,13 +352,13 @@ Traceback:
 <p>Jusqu'à maintenant, nous avons joué rapidement avec des données toutes simples (<code>42</code>, <code>&quot;Bonjour&quot;</code>), et depuis le début de ce chapitre, je vous parle de ces données comme étant des <em>objets</em> sur lesquels on peut coller des étiquettes.</p>
 <p>La notion d'<em>objet</em> en programmation est assez vaste, et c'est la raison pour laquelle vous en découvrirez les détails de façon progressive, à mesure que nous avancerons dans ce cours. Vous vous apercevrez bientôt qu'en Python, <em>tout</em> est considéré comme un objet, mais l'idée que je voudrais que vous gardiez en tête pour le moment c'est que <strong>les objets sont les choses que l'on manipule dans un programme</strong>.</p>
 <p>Et la première caractéristique d'un objet, c'est son <strong>type</strong>. On parle également de « type de données ».</p>
-<h3 id="plusieurs-types-dobjets"><a href="#plusieurs-types-dobjets"><span class="header-section-number">3.2.1</span> Plusieurs types d'objets</a></h3>
+<h3 id="plusieurs-types-de-données"><a href="#plusieurs-types-de-données"><span class="header-section-number">3.2.1</span> Plusieurs types de données</a></h3>
 <p>Vous serez d'accord avec moi si je vous dis qu'une éponge et un tournevis ne sont absolument pas la même chose. Pourtant, ce sont deux objets, non ? Eh bien en programmation, on dira que ce sont deux objets <em>de types différents</em>.</p>
 <p>Comme le dit le dicton, <em>on ne peut pas additionner des choux et des carottes</em> et <em>on ne mélange pas les torchons avec les serviettes</em>. Chaque objet porte un <em>type</em> qui caractérise la façon dont on peut l'utiliser : vous imaginez bien qu'on ne fera pas les mêmes choses avec le nombre <code>42</code> qu'avec la chaîne <code>&quot;Je mange des ours&quot;</code>.</p>
 <blockquote>
 <p><strong>Le type d'un objet, c'est ce qui définit ses caractéristiques : à quoi il ressemble, comment on l'utilise, à quoi il sert... bref, ce qu'il <em>est</em>.</strong></p>
 </blockquote>
-<p>Jusqu'ici, vous avez croisé trois types d'objets différents. Prenons le temps de les examiner de plus près, si vous le voulez bien.</p>
+<p>Jusqu'ici, vous avez croisé des objets de trois types différents. Prenons le temps de les examiner de plus près, si vous le voulez bien.</p>
 <h4 id="les-nombres-entiers"><a href="#les-nombres-entiers"><span class="header-section-number">3.2.1.1</span> Les nombres entiers</a></h4>
 <p>Nous l'avons vu au chapitre précédent, Python fait la différence entre les nombres entiers et les nombres à virgule. Un nombre entier, c'est donc un nombre <em>sans virgule</em>, comme <code>3</code>, <code>920000</code> ou encore <code>-12</code>. Ces nombres, Python les appelle des <code>int</code>. Il s'agit de l'abréviation de <em>integer</em> (le mot anglais pour <em>nombre entier</em>). En français, nous nous contenterons de les appeler « des entiers ».</p>
 <p>Étant donné que nous avons déjà passé en revue les opérations que l'on peut appliquer sur ces nombres, nous n'allons pas les répéter ici.</p>
@@ -431,14 +434,35 @@ Traceback:
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">print</span>(<span class="st">&quot;voici une chaîne</span><span class="ch">\n</span><span class="st">sur plusieurs lignes&quot;</span>)
 voici une chaîne
 sur plusieurs lignes</code></pre>
-<p>Nous verrons plus tard à quoi sert ce &quot;<code>print</code>&quot;. Remarquez simplement que l'affichage correspond bien à ce que nous voulions.</p>
+<p>Nous verrons juste après à quoi sert ce &quot;<code>print</code>&quot;. Remarquez simplement que l'affichage correspond bien à ce que nous voulions.</p>
 <p>La seconde alternative, c'est d'entourer notre chaîne avec des <em>triples guillemets</em> (<code>&quot;&quot;&quot;</code>) ou des <em>triples apostrophes</em>.</p>
 <p>Essayons :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&quot;&quot;&quot;voici une chaîne</span>
 <span class="st">... sur plusieurs lignes&quot;&quot;&quot;</span>
 <span class="co">&#39;voici une chaîne\nsur plusieurs lignes&#39;</span></code></pre>
-<p>Les trois points (<code>...</code>) qui s'affichent dans cet exemple sont un indice visuel de la console Python qui signifient que la saisie n'est pas terminée, et qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici, j'ai tapé <code>&quot;&quot;&quot;voici une chaîne</code>, &quot;<code>Entrée</code>&quot;, <code>sur plusieurs lignes&quot;&quot;&quot;</code>.</p>
+<p>Les trois points (<code>...</code>) qui s'affichent dans cet exemple sont un indice visuel de la console Python qui signifient que la saisie n'est pas terminée, et qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici, j'ai tapé <code>&quot;&quot;&quot;voici une chaîne</code>, <code>&lt;Entrée&gt;</code>, <code>sur plusieurs lignes&quot;&quot;&quot;</code>.</p>
 <p>Si vous utilisez la console IDLE, ces trois points n'apparaîtront pas. Ne soyez donc pas dérouté par la différence d'affichage avec les exemples du cours.</p>
+<h3 id="dautres-types-dobjets"><a href="#dautres-types-dobjets"><span class="header-section-number">3.2.2</span> D'autres types d'objets</a></h3>
+<p>Juste un peu plus haut, je vous ai montré un exemple bizarre où j'ai écrit <code>print('une chaîne')</code>. Qu'est-ce que c'est que ce <code>print</code> ?</p>
+<p>La première observation que l'on peut faire, c'est que <code>print</code> est un nom que Python reconnaît :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">print</span>
+&lt;built-in function <span class="dt">print</span>&gt;</code></pre>
+<p>Ce que l'interpréteur vient de répondre, c'est que <code>print</code> est une <em>fonction</em>. C'est-à-dire un objet qui sert à <em>faire quelque chose</em>.</p>
+<p>Pour utiliser une fonction, il faut l'<em>appeler</em>. Pour cela, il faut accoller des parenthèses après son nom :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">print</span>()
+
+&gt;&gt;&gt;</code></pre>
+<blockquote>
+<p><em>Mais... il ne s'est rien passé ?!</em></p>
+</blockquote>
+<p>Si si, regardez plus attentivement : Python a sauté une ligne. En fait, l'appel <code>print()</code> affiche une ligne vide. Essayons autre chose :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">print</span>(<span class="st">&quot;Bonjour !&quot;</span>)
+Bonjour !
+&gt;&gt;&gt; x = <span class="dv">2</span> + <span class="dv">2</span>
+&gt;&gt;&gt; <span class="dt">print</span>(<span class="st">&quot;x =&quot;</span>, x)
+x = <span class="dv">4</span></code></pre>
+<p>Cette fois, nous avons passé <em>un argument</em> à la fonction <code>print</code> (la chaîne <code>&quot;Bonjour !&quot;</code>), et le résultat affiché est le contenu de cette chaîne. Puis nous lui avons passé deux objets (la chaîne <code>&quot;x =&quot;</code> et le nombre étiqueté par la variable <code>x</code>) et celui-ci les a affichés à la suite.</p>
+<p>Vous l'aurez deviné ; la fonction <code>print(...)</code> sert à afficher ses arguments à l'écran.</p>
 <section class="footnotes">
 <hr />
 <ol>
