@@ -42,7 +42,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Ces trois chevrons (`>>>`) constituent **l'invite de commande**. C'est la façon
 dont Python vous signale qu'il vous écoute et qu'il attend vos instructions.
 Montrez-vous bien élevé, saluez-le et validez en appuyant sur la touche
-`Entrée`.
+`<Entrée>`.
 
 ```python
 >>> Bonjour
@@ -82,7 +82,7 @@ Rassurez-vous : aussi taquin soit-il, Python n'est pas vraiment en train de se
 moquer de vous. Laissez-moi vous expliquer.
 
 Le rôle de cette console interactive est d'**interpréter** les instructions que
-vous lui soumettez. Chaque fois que vous appuyez sur `Entrée`, vous envoyez
+vous lui soumettez. Chaque fois que vous appuyez sur `<Entrée>`, vous envoyez
 l'expression que vous venez de taper à Python, celui-ci l'évalue et vous
 retourne *sa valeur*. Jusqu'ici, vous lui avez envoyé des expressions qui ont
 toutes la même forme : du texte entouré de guillemets. Il s'agit de données de
