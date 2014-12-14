@@ -495,5 +495,30 @@ nous lui avons passé deux objets (la chaîne `"x ="` et le nombre étiqueté pa
 la variable `x`) et celui-ci les a affichés à la suite.
 
 Vous l'aurez deviné ; la fonction `print(...)` sert à afficher ses arguments à
+l'écran. C'est d'ailleurs ce que signifie son nom : *imprimer* (sous-entendu
+*imprimer à l'écran*, soit *afficher*).
+
+> *Mais depuis le début on affiche des trucs à l'écran, il suffit de les taper
+> dans la console pour ça !*
+
+C'est vrai, sauf que nous n'allons pas utiliser le console *ad vitam aeternam*.
+À un moment donné, nos programmes vont devenir plus compliqués, et nous devrons
+les écrire dans des fichiers pour les exécuter hors de la console interactive.
+Dans ce cas, nous utiliserons `print(...)` pour afficher des informations à
 l'écran.
 
+De plus, son comportement n'est pas tout à fait le même :
+
+```python
+>>> ma_chaine = "Je vous offre un anti-slash : \\"
+>>> ma_chaine
+'Je vous offre un anti-slash : \\'
+>>> print(ma_chaine)
+Je vous offre un anti-slash : \
+```
+
+Lorsque j'envoie `ma_chaine` à l'interpréteur, celui-ci affiche la
+**représentation** de l'objet (c'est-à-dire la chaîne telle qu'on la tape pour
+la créer), alors que si je l'affiche avec `print(ma_chaine)`, Python affiche
+**le message** contenu dans la chaîne, en remplaçant les caractères échappés et en
+supprimant les guillemets.

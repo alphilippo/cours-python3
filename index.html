@@ -462,7 +462,18 @@ Bonjour !
 &gt;&gt;&gt; <span class="dt">print</span>(<span class="st">&quot;x =&quot;</span>, x)
 x = <span class="dv">4</span></code></pre>
 <p>Cette fois, nous avons passé <em>un argument</em> à la fonction <code>print</code> (la chaîne <code>&quot;Bonjour !&quot;</code>), et le résultat affiché est le contenu de cette chaîne. Puis nous lui avons passé deux objets (la chaîne <code>&quot;x =&quot;</code> et le nombre étiqueté par la variable <code>x</code>) et celui-ci les a affichés à la suite.</p>
-<p>Vous l'aurez deviné ; la fonction <code>print(...)</code> sert à afficher ses arguments à l'écran.</p>
+<p>Vous l'aurez deviné ; la fonction <code>print(...)</code> sert à afficher ses arguments à l'écran. C'est d'ailleurs ce que signifie son nom : <em>imprimer</em> (sous-entendu <em>imprimer à l'écran</em>, soit <em>afficher</em>).</p>
+<blockquote>
+<p><em>Mais depuis le début on affiche des trucs à l'écran, il suffit de les taper dans la console pour ça !</em></p>
+</blockquote>
+<p>C'est vrai, sauf que nous n'allons pas utiliser le console <em>ad vitam aeternam</em>. À un moment donné, nos programmes vont devenir plus compliqués, et nous devrons les écrire dans des fichiers pour les exécuter hors de la console interactive. Dans ce cas, nous utiliserons <code>print(...)</code> pour afficher des informations à l'écran.</p>
+<p>De plus, son comportement n'est pas tout à fait le même :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; ma_chaine = <span class="st">&quot;Je vous offre un anti-slash : </span><span class="ch">\\</span><span class="st">&quot;</span>
+&gt;&gt;&gt; ma_chaine
+<span class="co">&#39;Je vous offre un anti-slash : \\&#39;</span>
+&gt;&gt;&gt; <span class="dt">print</span>(ma_chaine)
+Je vous offre un anti-slash : \</code></pre>
+<p>Lorsque j'envoie <code>ma_chaine</code> à l'interpréteur, celui-ci affiche la <strong>représentation</strong> de l'objet (c'est-à-dire la chaîne telle qu'on la tape pour la créer), alors que si je l'affiche avec <code>print(ma_chaine)</code>, Python affiche <strong>le message</strong> contenu dans la chaîne, en remplaçant les caractères échappés et en supprimant les guillemets.</p>
 <section class="footnotes">
 <hr />
 <ol>
