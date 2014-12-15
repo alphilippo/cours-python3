@@ -15,7 +15,7 @@ pdf:
 
 html:
 	$(info $(DOCNAME).html)
-	@$(CC) -o index.html $(SRCFILES) $(FLAGS) $(HTMLFLAGS)
+	@$(CC) -o $(DOCNAME).html $(SRCFILES) $(FLAGS) $(HTMLFLAGS)
 
 epub:
 	$(info $(DOCNAME).epub)
