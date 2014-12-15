@@ -142,7 +142,7 @@ on peut même chaîner les affectations, comme ceci :
 0
 ```
 
-Notez que dans ce cas, nous avons simplement collé deux étiquettes sur le même
+Notez que dans ce cas, nous avons juste collé deux étiquettes sur le même
 objet. Si on en déplace une, l'autre ne sera pas impactée.
 
 Enfin, si vous souhaitez supprimer purement et simplement une variable, vous
@@ -174,16 +174,39 @@ suppression de l'une d'entre elles n'affectera pas les autres :
 1
 ```
 
-Voilà qui devrait suffir en ce qui concerne les affectations. Et si nous nous
-intéressions maintenant à ces fameux objets que vous venez d'apprendre à
-nommer ?
+### Comment choisir un nom
 
-    TODO : passer ce qui suit dans un paragraphe sur les conventions de nommage.
+Nommer les choses n'est pas facile, surtout quand on n'en a pas l'habitude. Au
+début de votre apprentissage, vous serez tentés de choisir des noms très
+génériques pour vos variables, comme `x`, `y`, `a`, `b` ou encore `plop`,
+`choucroute`, ou encore pire : `variable`, `variable2`, `variable3`.
 
-> __Certains mots-clés de Python sont *réservés*, c'est-à-dire que vous ne
-pouvez pas créer des variables portant ce nom.__
+Voici quelques conseils pour nommer correctement vos variables.
 
-En voici la liste pour Python 3 :
+* Un nom de variable doit **obligatoirement** commencer par une lettre, ou bien
+  par le symbole *underscore* (le "`_`" sous la touche `<8>` des claviers
+  français).
+
+* Donnez à vos variables un nom qui décrit leur rôle plutôt que leur contenu :
+  `somme`, `produit`, `prix`, `pt_de_vie` sont mieux que `nombre` ou `entier`.
+
+* Même si Python 3 les accepte, **interdisez-vous les caractères accentués**.
+  Contentez-vous de symboles simples. Il vaut mieux nommer une variable
+  `prenom` plutôt que `prénom`, ou `coeur` plutôt que `cœur`.
+
+* À quelques exceptions courantes près (du style `x` et `y` pour des
+  coordonnées), il est préférable de choisir des noms qui font **au moins 3
+  caractères**. `nom` est préférable à `nm`, `option` est préférable à `op`. Et
+  dans tous les cas, n'appelez **jamais** une variable `l` (L minuscule).
+  Suivant la police de caractères utilisée, il est beaucoup trop facile de
+  confondre le L minuscule avec le chiffre *1* (un) ou le *i* majuscule.
+
+* À une seule exception près (que nous verrons dans un autre chapitre) une
+  variable devrait tout le temps être écrite *en lettres minuscules* quitte à
+séparer les mots d'un *underscore*. Ainsi, préférez `pos_joueur` à `PosJoueur`.
+
+* Certains mots-clés de Python sont *réservés*, c'est-à-dire que **vous ne pouvez
+  pas créer des variables portant ce nom**. En voici la liste pour Python 3 :
 
 +----------+---------+--------+----------+-------+
 |`and`     |`del`    |`from`  |`none`    |`true` |
@@ -201,9 +224,19 @@ En voici la liste pour Python 3 :
 |`def`     |`for`    |`lambda`|`return`  |       |
 +----------+---------+--------+----------+-------+
 
-Ces mots-clés sont utilisés par Python, vous ne pouvez pas construire de
-variables portant ces noms. Vous allez découvrir dans la suite de ce cours la
-majorité de ces mots-clés et comment ils s'utilisent.
+Vous vous direz sûrement que certaines de ces règles relèvent « des goûts et
+des couleurs ». Sachez qu'en Python, il existe une norme qui décrit les
+*conventions de nommage* et que la grande majorité des développeurs Python la
+respectent. 
+
+Cette norme est la [PEP-08](https://www.python.org/dev/peps/pep-0008/). La
+respecter n'est pas obligatoire, mais vous pouvez être sûr que la remarque vous
+sera faite si quelqu'un relit votre code, alors autant prendre de bonnes
+habitudes dès le départ. ;)
+
+Voilà qui devrait suffir en ce qui concerne les variables. Et si nous nous
+intéressions maintenant à ces fameux objets que vous venez d'apprendre à
+nommer ?
 
 ## C'est l'histoire d'un type...
 
@@ -444,14 +477,14 @@ Essayons :
 ```
 
 Les trois points (`...`) qui s'affichent dans cet exemple sont un indice visuel
-de la console Python qui signifient que la saisie n'est pas terminée, et
-qu'elle attend que je poursuive celle-ci sur une nouvelle ligne. Ici,
-j'ai tapé `"""voici une chaîne`, `<Entrée>`, `sur plusieurs lignes"""`.
+de la console Python qui signifie que la saisie n'est pas terminée, et
+que Python attend que je la termine sur une nouvelle ligne. Ici,
+j'ai simplement tapé `"""voici une chaîne`, `<Entrée>`, `sur plusieurs lignes"""`.
 
 Si vous utilisez la console IDLE, ces trois points n'apparaîtront pas. Ne soyez
 donc pas dérouté par la différence d'affichage avec les exemples du cours.
 
-### D'autres types d'objets
+### Un autre type d'objet : les fonctions
 
 Juste un peu plus haut, je vous ai montré un exemple bizarre où j'ai écrit
 `print('une chaîne')`. Qu'est-ce que c'est que ce `print` ?
@@ -465,10 +498,8 @@ Python reconnaît :
 ```
 
 Ce que l'interpréteur vient de répondre, c'est que `print` est une *fonction*.
-C'est-à-dire un objet qui sert à *faire quelque chose*.
-
-Pour utiliser une fonction, il faut l'*appeler*. Pour cela, il faut accoller des
-parenthèses après son nom :
+C'est-à-dire un objet qui sert à *faire quelque chose*. Pour utiliser une
+fonction, il faut l'*invoquer* en accollant des parenthèses après son nom :
 
 ```python
 >>> print()
@@ -492,22 +523,22 @@ x = 4
 Cette fois, nous avons passé *un argument* à la fonction `print` (la chaîne
 `"Bonjour !"`), et le résultat affiché est le contenu de cette chaîne. Puis
 nous lui avons passé deux objets (la chaîne `"x ="` et le nombre étiqueté par
-la variable `x`) et celui-ci les a affichés à la suite.
+la variable `x`) et Python les a affiché l'un à la suite de l'autre.
 
-Vous l'aurez deviné ; la fonction `print(...)` sert à afficher ses arguments à
+Vous l'aurez deviné ; la fonction `print(...)` sert à afficher des objets à
 l'écran. C'est d'ailleurs ce que signifie son nom : *imprimer* (sous-entendu
 *imprimer à l'écran*, soit *afficher*).
 
 > *Mais depuis le début on affiche des trucs à l'écran, il suffit de les taper
 > dans la console pour ça !*
 
-C'est vrai, sauf que nous n'allons pas utiliser le console *ad vitam aeternam*.
+C'est vrai, sauf que nous n'allons pas utiliser le console *ad vitam æternam*.
 À un moment donné, nos programmes vont devenir plus compliqués, et nous devrons
 les écrire dans des fichiers pour les exécuter hors de la console interactive.
 Dans ce cas, nous utiliserons `print(...)` pour afficher des informations à
 l'écran.
 
-De plus, son comportement n'est pas tout à fait le même :
+De plus, le résultat n'est pas tout à fait le même :
 
 ```python
 >>> ma_chaine = "Je vous offre un anti-slash : \\"
@@ -522,3 +553,148 @@ Lorsque j'envoie `ma_chaine` à l'interpréteur, celui-ci affiche la
 la créer), alors que si je l'affiche avec `print(ma_chaine)`, Python affiche
 **le message** contenu dans la chaîne, en remplaçant les caractères échappés et en
 supprimant les guillemets.
+
+Voyons maintenant une autre fonction utile : `type()`. Cette fonction
+retourne le type de l'objet qu'on lui passe en argument : 
+
+```python
+>>> type(42)
+<class 'int'>
+>>> type(42.5)
+<class 'float'>
+>>> type("Bonjour !")
+<class 'str'>
+```
+
+Comme vous pouvez le constater, je ne vous ai pas menti tout à l'heure : les
+entiers sont bien des `int`, les nombres à virgule des `float` et les chaînes
+de caractères des `str`.
+
+> *Que veut dire ce `class` ?*
+
+En Python, une *classe* est simplement un synonyme de *type*. Nous verrons
+beaucoup plus loin dans ce cours (quand nous créerons nos propres types
+d'objets) ce qu'est précisément une classe. Pour l'instant, retenez simplement
+qu'un type et une classe sont exactement la même chose en Python.
+
+Il peut être intéressant de remarquer qu'à chacun des trois types de base que
+nous connaissons correspond une fonction du même nom. Essayez de deviner, grâce
+à l'exemple suivant, à quoi servent ces fonctions : 
+
+```python
+>>> entier = 42
+>>> flottant = float(entier)
+>>> flottant
+42.0
+>>> chaine = str(entier)
+>>> chaine
+'42'
+>>> int(chaine)
+42
+```
+
+Alors ?
+
+> *Euh, ça transforme un objet d'un type vers un autre ?*
+
+Exactement ! On peut utiliser ces fonctions pour réaliser des conversions entre
+types. En fait, les fonctions `int()`, `float()` et `str()` s'appellent des
+*constructeurs*. Elles servent à construire des entiers, des flottants et des
+chaînes de caractères à partir d'autres objets.
+
+Dernière remarque. Quelle autre différence peut-on observer entre ces trois
+fonctions et la fonction `print()` ?
+
+Regardez cet exemple : 
+
+```python
+>>> a = str(42.512)
+>>> a
+'42.512'
+>>> b = print("Coucou")
+Coucou
+>>> b
+>>>
+```
+
+Dans cet exemple, j'ai transformé le nombre `42.512` en une chaîne de
+caractères que j'ai affecté à la variable `a`. En somme, j'ai affecté *le
+résultat* de `str(42.512)` à une variable. 
+
+Puis j'ai essayé d'affecter le résultat de `print("Coucou")` à la variable `b`. 
+Comme prévu, l'appel à `print()` a affiché la chaîne `Coucou` à l'écran mais la
+variable `b`... ne contient rien du tout, même si elle existe !
+
+Cela montre que **certaines fonctions retournent un résultat** alors que
+d'autres non. En informatique, comme on aime bien donner des noms différents à
+des trucs différents, on appelle parfois une fonction qui ne retourne aucun
+résultat une *procédure* (ou encore une *routine*) plutôt qu'une fonction.
+
+Mais assez parlé des fonctions. Nous aurons l'occasion d'y revenir plus tard.
+
+## Exercices
+
+Parce que la programmation ne s'apprend pas seulement dans un grimoire, tous
+les chapitres de ce cours contiendront dorénavant des exercices.
+
+*Faites-les* !
+
+Non, sérieusement, *faites-les*. Le seul moyen pour vous de retenir ce que vous
+venez de lire et que votre apprentissage soit utile, c'est de réveiller votre
+cerveau et d'être actif.
+
+Soient les variables suivantes : 
+
+```python
+>>> x = 38
+>>> y = 54
+```
+
+Je vous demande simplement de créer les quatres variables qui suivent :
+
+* `somme` doit contenir la somme de `x` et `y`,
+* `produit` doit contenir le résultat de la multiplication de `x` par `y`,
+* `diff` doit contenir la différence entre `x` et `y`,
+* `modulo` doit contenir le reste de la division euclidienne de `y` par `x`.
+
+En guise de second exercice, je vous demande de trouver un moyen de
+**permuter** ces deux variables. C'est-à-dire écrire du code tel que vous
+obteniez dans la console le résultat suivant : 
+
+```python
+>>> x
+54
+>>> y
+38
+```
+
+Ne trichez pas ! `x, y = 54, 38` n'est pas une solution valide. ;)
+
+Votre code doit permuter ces deux variables quel que soit leur contenu.
+À titre d'indication, il existe deux solutions : la première en trois
+instructions, la seconde en une seule ligne.
+
+Bonne chance !
+
+## Ce qu'il faut retenir
+
+Nous avons vu beaucoup de choses dans ce chapitre. Voici ce que vous devriez en
+retenir : 
+
+* Une variable, c'est une *étiquette* que l'on colle sur un objet pour lui
+  donner un *nom*,
+* Tant qu'un objet est référencé par une variable, on peut le manipuler :
+  Python se souviendra de lui,
+* Le *type* d'un objet, c'est ce qui décrit sa nature : à quoi il ressemble,
+  comment on l'utilise, etc.
+* Vous connaissez quatre types d'objets différents : 
+    * Les `int` sont les nombres entiers.
+    * Les `float` sont les nombres à virgule.
+    * Les `str` sont les chaînes de caractères ; elles contiennent du *texte*.
+    * Les fonctions sont des *actions* que l'on peut invoquer pour les faire
+      exécuter par Python.
+
+Soufflez ! Ce chapitre était très théorique. Prenez un peu de temps pour le
+digérer. À partir du chapitre suivant, nous allons commencer à réaliser de
+véritables programmes.
+
