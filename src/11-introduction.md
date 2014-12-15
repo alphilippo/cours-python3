@@ -35,13 +35,13 @@ l'école, c'est relou*.
 
 Il en va de même pour la programmation : ce n'est pas parce que l'école en ôte
 toute la magie que celle-ci n'est pas présente. Il suffit d'être attentif pour
-la remarquer. Sans parler d'ordinateur, si je vous demande comment quel est
-l'art qui consiste à accomplir des actions aux conséquences parfois démesurées
-par le biais d'incantations, l'activité dans laquelle on *invoque* des entités
-d'un monde abstrait pour bénéficier de leur puissance et accomplir notre
-volonté, ne penseriez-vous pas d'abord à la sorcellerie ? Eh bien figurez-vous
-que c'est pourtant ce que nous nous apprêtons à faire du bout de nos claviers.
-Ça, et bien plus encore !
+la remarquer. Sans parler d'ordinateur, si je vous demande quel est l'art qui
+consiste à accomplir des actions aux conséquences parfois démesurées par le
+biais d'incantations, l'activité dans laquelle on *invoque* des entités d'un
+monde abstrait pour bénéficier de leur puissance et accomplir notre volonté, ne
+penseriez-vous pas d'abord à la sorcellerie ? Eh bien figurez-vous que c'est
+pourtant ce que nous nous apprêtons à faire du bout de nos claviers.  Ça, et
+bien plus encore !
 
 ## Le langage Python
 
