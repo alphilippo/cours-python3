@@ -123,7 +123,7 @@ Vous pouvez même saisir des nombres à virgule, regardez :
 la virgule. La virgule a un tout autre sens pour Python, que nous découvrirons
 plus loin.**
 
-En programmation, ces nombres à virgules sont appelé des **flottants**. Ils ne
+En programmation, ces nombres à virgule sont appelé des **flottants**. Ils ne
 sont pas représentés de la même façon dans la mémoire de l'ordinateur que les
 nombres entiers. Ainsi, même si leurs valeurs sont égales, sachez que `5` n'est
 pas tout à fait la même chose que `5.0`.
@@ -288,9 +288,9 @@ humains, de faire faire des calculs à un ordinateur. En fait, pour lui, *toute
 instruction est un calcul à effectuer*, y compris, évidemment, les petites
 opérations de calcul mental que nous venons de lui soumettre.
 
-## En résumé
+## Ce qu'il faut retenir
 
-Récapitulons ce que nous avons appris dans ce premier chapitre.
+Récapitulons ce que nous avons appris dans ce chapitre.
 
 - L'invite de commandes Python permet de tester du code au fur et à mesure
   qu'on l'écrit.

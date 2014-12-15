@@ -33,6 +33,6 @@ Bon, OK, j'exagère peut-être un *tout petit* peu.
 
 En fait, nous n'allons pas partir en voyage ni braver le danger. Promis. Vous
 allez simplement suivre un cours en toute sécurité et pas à pas, sans bouger de
-votre fauteuil. Vous êtes rassuré ?
+votre fauteuil. Vous voilà rassuré ?
 
-À part ça, **tout ce que je vous ai dit d'autre est vrai !**
+Tant mieux, parce que **tout le reste est vrai !**
