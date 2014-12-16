@@ -31,7 +31,7 @@ Bien sûr, ça n'empêche pas cette trempe de professeurs d'exister, encore
 heureux ! On en a tous eu un ou deux qui nous ont marqué à vie parce qu'ils ont
 su transcender le discours de prof à élève, éveiller notre curiosité et notre
 désir d'en savoir plus, mais ils ne sont que l'exception qui confirme la
-règle : l'école, ce n'est pas *le cercle des poêtes disparus*, c'est le moule
+règle : l'école, ce n'est pas *le cercle des poètes disparus*, c'est le moule
 de la société de demain.
 
 Revenons-en à la programmation : ce n'est pas parce que l'école lui ôte toute
