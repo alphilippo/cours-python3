@@ -187,7 +187,7 @@ Voici quelques conseils pour nommer correctement vos variables.
   par le symbole *underscore* (le "`_`" sous la touche `<8>` des claviers
   français).
 
-* Donnez à vos variables un nom qui décrit leur rôle plutôt que leur contenu :
+* Donnez à vos variables un nom qui décrit leur rôle plutôt que leur nature :
   `somme`, `produit`, `prix`, `pt_de_vie` sont mieux que `nombre` ou `entier`.
 
 * Même si Python 3 les accepte, **interdisez-vous les caractères accentués**.
@@ -652,10 +652,10 @@ Soient les variables suivantes :
 
 Je vous demande simplement de créer les quatres variables qui suivent :
 
-* `somme` doit contenir la somme de `x` et `y`,
-* `produit` doit contenir le résultat de la multiplication de `x` par `y`,
-* `diff` doit contenir la différence entre `x` et `y`,
-* `modulo` doit contenir le reste de la division euclidienne de `y` par `x`.
+* `somme` devra référencer la somme de `x` et `y`,
+* `produit` désignera le résultat de la multiplication de `x` par `y`,
+* `diff` sera la différence entre `x` et `y`,
+* et `modulo` le reste de la division euclidienne de `y` par `x`.
 
 En guise de second exercice, je vous demande de trouver un moyen de
 **permuter** ces deux variables. C'est-à-dire écrire du code tel que vous
@@ -670,8 +670,8 @@ obteniez dans la console le résultat suivant :
 
 Ne trichez pas ! `x, y = 54, 38` n'est pas une solution valide. ;)
 
-Votre code doit permuter ces deux variables quel que soit leur contenu.
-À titre d'indication, il existe deux solutions : la première en trois
+Votre code doit permuter ces deux variables quel que soit leurs valeurs.  À
+titre d'indication, il existe deux solutions : la première en trois
 instructions, la seconde en une seule ligne.
 
 Bonne chance !
