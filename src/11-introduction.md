@@ -47,8 +47,77 @@ encore !
 
 ## Le langage Python
 
+Python est un langage de programmation moderne créé au tout début des années
+1990 par un ingénieur hollandais du nom de Guido van Rossum. Le langage doit
+son nom à la passion de son créateur pour les célèbres Monty Python, auxquels
+on peut trouver d'innombrables références dans la documentation.
+
+Aujourd'hui, après plus de deux décennies d'existence, Python est dans sa
+troisième version majeure. À au moment où sont écrites ces lignes, la dernière
+version stable du langage est la 3.4.
+
+
     TODO
 
-## Installer Python sur votre ordinateur
+
+### Comment ça fonctionne ?
+
+Qu'il s'agisse d'un jeu vidéo, d'un navigateur internet, ou même d'un système
+d'exploitation comme Windows ou Linux, un **programme**, ce n'est au fond rien
+d'autre qu'une série d'instructions que l'ordinateur doit exécuter. Suivant le
+langage (ou plutôt la technologie) que l'on utilise, cela peut se présenter
+sous plusieurs formes. 
+
+### Pourquoi apprendre Python ?
+
+Il serait extrêmement lourd de détailler ici toutes les qualités qui font de
+Python un langage idéal pour apprendre à programmer. Néanmoins, si vous
+êtes à la recherche du bon langage pour vous lancer, il faut bien que vous
+puissiez le comparer aux autres pour faire votre choix. Voici donc quelques
+raisons pour lesquelles vous devriez choisir Python comme premier langage
+de programmation.
+
+Commençons par ses qualités intrinsèques. Le langage a été pensé pour être **le
+plus lisible possible**. Contrairement à presque tous les autres langages de
+programmation, Python impose aux développeurs certaines règles de mise en forme
+et incite donc les débutants à prendre *les bonnes habitudes* dès le début de
+leur apprentissage. 
+
+De plus, Python est un langage à **très haut niveau** d'abstraction. Cela
+signifie que c'est le langage qui se charge de gérer pour vous la mémoire
+utilisée par votre programme. Cela permet au développeur de se concentrer sur
+ce qu'il veut que son programme fasse réellement, plutôt que d'encombrer le
+code d'instructions rébarbatives et bien souvent propices aux erreurs.
+
+Ensuite, Python est **portable**. À quelques exceptions près, un programme
+écrit en Python peut être exécuté sur n'importe quel système actuel (Windows,
+GNU/Linux, Mac OS, ou encore les smartphones et tablettes sous Android ou iOS).
+
+Une autre qualité fondamentale de Python est que « **les piles sont inclues
+dans la boîte** ». Cela signifie que la *bibliothèque standard* du langage (qui
+est livrée avec lorsque vous installez Python) est extrêmement riche et
+contient du code qui permet au développeur de réaliser beaucoup de choses
+courantes sans avoir à réinventer la roue. Par exemple, elle contient des
+modules permettant de lire ou enregistrer des fichiers XML ou CSV, d'échanger
+des informations sur un réseau, de télécharger des pages web, d'interagir avec
+votre système d'exploitation et même de créer de petites interfaces graphiques
+(des programmes avec des fenêtres).
+
+Enfin, Python est une technologie **libre** et **très populaire**. Cela
+signifie :
+
+* qu'il est développé, maintenu et documenté par une communauté de passionnés
+  du monde entier ;
+* qu'il est et restera toujours **gratuit** ;
+* que vous avez le droit de l'utiliser pour n'importe quel programme, que vous
+  comptiez le vendre ou non ;
+* qu'il est **extrêmement bien documenté**, donc qu'à condition de travailler
+  votre niveau d'anglais, vous pouvez vous reposer sur sa documentation plutôt
+  que d'apprendre son utilisation par cœur ;
+* que vous ne vous retrouverez jamais seul face à un problème puisqu'il existe
+  de nombreuses communautés, y compris francophones, prêtes à aider les
+  débutants.
+
+## Installer Python
 
     TODO
