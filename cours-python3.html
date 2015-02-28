@@ -72,7 +72,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#exercices"><span class="toc-section-number">3.3</span> Exercices</a></li>
 <li><a href="#ce-quil-faut-retenir-1"><span class="toc-section-number">3.4</span> Ce qu'il faut retenir</a></li>
 </ul></li>
-<li><a href="#section"><span class="toc-section-number">4</span> </a></li>
+<li><a href="#booléens-et-branchements-conditionnels"><span class="toc-section-number">4</span> Booléens et branchements conditionnels</a><ul>
+<li><a href="#vrai-ou-faux"><span class="toc-section-number">4.1</span> Vrai ou faux ?</a></li>
+</ul></li>
 </ul>
 </nav>
 <h1 id="avant-propos" class="unnumbered"><a href="#avant-propos">Avant-propos</a></h1>
@@ -602,7 +604,23 @@ Coucou
 </ul></li>
 </ul>
 <p>Soufflez ! Ce chapitre était très théorique. Prenez un peu de temps pour le digérer. À partir du chapitre suivant, nous allons commencer à réaliser de véritables programmes.</p>
-<h1 id="section"><a href="#section"><span class="header-section-number">4</span> </a></h1>
+<h1 id="booléens-et-branchements-conditionnels"><a href="#booléens-et-branchements-conditionnels"><span class="header-section-number">4</span> Booléens et branchements conditionnels</a></h1>
+<blockquote>
+<p>-- Quarante-deux ! cria Loonquawl. Et c'est tout ce que t'as à nous montrer au bout de sept millions et demi d'années de boulot ?</p>
+<p>-- J'ai vérifié très soigneusement, dit l'ordinateur, et c'est incontestablement la réponse exacte. Je crois que le problème, pour être tout à fait franc avec vous, est que vous n'avez jamais vraiment bien saisi la question.</p>
+</blockquote>
+<blockquote>
+<p><em>Douglas Adams -- Le Guide du Voyageur Galactique</em></p>
+</blockquote>
+<p>Vous ne vous en doutez sûrement pas, mais dans la totalité des programmes qu'il exécute, l'ordinateur passe son temps à <strong>se poser des questions</strong>. Oh, bien sûr, il ne se demande pas ce qu'il va manger ce soir ni quel est le sens de sa vie, mais il se pose des questions d'ordinateur, qui lui permettent de décider <em>ce qu'il va faire ensuite</em>.</p>
+<p>Par exemple, imaginons un programme qui demande à son utilisateur d'entrer son mot de passe pour exécuter une action. À un moment donné de ce programme, l'ordinateur va devoir décider si le mot de passe entré par l'utilisateur est le bon, et il exécutera une action différente suivant que ce soit le cas ou non. Ce genre de carrefour dans l'exécution d'un programme s'appelle un <strong>branchement conditionnel</strong>, et c'est ce que nous allons étudier tout au long de ce chapitre.</p>
+<p>Dans ce chapitre, nous allons apprendre :</p>
+<ul>
+<li>ce qu'est une valeur <strong>booléenne</strong>,</li>
+<li>la notion de <strong>prédicat</strong>,</li>
+<li>à effectuer différentes actions dans différentes conditions.</li>
+</ul>
+<h2 id="vrai-ou-faux"><a href="#vrai-ou-faux"><span class="header-section-number">4.1</span> Vrai ou faux ?</a></h2>
 <section class="footnotes">
 <hr />
 <ol>
