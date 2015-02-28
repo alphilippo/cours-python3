@@ -9,7 +9,6 @@ header-includes:
     - \usepackage[french]{babel}
     - \usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
     - \usepackage{fancyhdr}
-    - \pagestyle{fancy}
 ...
 
 # Avant-propos {.unnumbered}

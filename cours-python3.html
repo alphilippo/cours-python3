@@ -33,7 +33,6 @@ code > span.er { color: #ff0000; font-weight: bold; }
   
   
   
-  
 </head>
 <body>
 <header>
@@ -72,8 +71,15 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#exercices"><span class="toc-section-number">3.3</span> Exercices</a></li>
 <li><a href="#ce-quil-faut-retenir-1"><span class="toc-section-number">3.4</span> Ce qu'il faut retenir</a></li>
 </ul></li>
-<li><a href="#booléens-et-branchements-conditionnels"><span class="toc-section-number">4</span> Booléens et branchements conditionnels</a><ul>
-<li><a href="#vrai-ou-faux"><span class="toc-section-number">4.1</span> Vrai ou faux ?</a></li>
+<li><a href="#branchements-conditionnels"><span class="toc-section-number">4</span> Branchements conditionnels</a><ul>
+<li><a href="#notre-programme-dexemple"><span class="toc-section-number">4.1</span> Notre programme d'exemple</a><ul>
+<li><a href="#écrire-un-programme-dans-un-fichier"><span class="toc-section-number">4.1.1</span> Écrire un programme dans un fichier</a></li>
+<li><a href="#jouons"><span class="toc-section-number">4.1.2</span> Jouons !</a></li>
+</ul></li>
+<li><a href="#vrai-ou-faux"><span class="toc-section-number">4.2</span> Vrai ou faux ?</a><ul>
+<li><a href="#les-booléens"><span class="toc-section-number">4.2.1</span> Les booléens</a></li>
+<li><a href="#opérateurs-de-comparaison"><span class="toc-section-number">4.2.2</span> Opérateurs de comparaison</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -604,7 +610,7 @@ Coucou
 </ul></li>
 </ul>
 <p>Soufflez ! Ce chapitre était très théorique. Prenez un peu de temps pour le digérer. À partir du chapitre suivant, nous allons commencer à réaliser de véritables programmes.</p>
-<h1 id="booléens-et-branchements-conditionnels"><a href="#booléens-et-branchements-conditionnels"><span class="header-section-number">4</span> Booléens et branchements conditionnels</a></h1>
+<h1 id="branchements-conditionnels"><a href="#branchements-conditionnels"><span class="header-section-number">4</span> Branchements conditionnels</a></h1>
 <blockquote>
 <p>-- Quarante-deux ! cria Loonquawl. Et c'est tout ce que t'as à nous montrer au bout de sept millions et demi d'années de boulot ?</p>
 <p>-- J'ai vérifié très soigneusement, dit l'ordinateur, et c'est incontestablement la réponse exacte. Je crois que le problème, pour être tout à fait franc avec vous, est que vous n'avez jamais vraiment bien saisi la question.</p>
@@ -620,7 +626,56 @@ Coucou
 <li>la notion de <strong>prédicat</strong>,</li>
 <li>à effectuer différentes actions dans différentes conditions.</li>
 </ul>
-<h2 id="vrai-ou-faux"><a href="#vrai-ou-faux"><span class="header-section-number">4.1</span> Vrai ou faux ?</a></h2>
+<h2 id="notre-programme-dexemple"><a href="#notre-programme-dexemple"><span class="header-section-number">4.1</span> Notre programme d'exemple</a></h2>
+<p>Voici un programme qui illustre ce que nous allons apprendre dans ce chapitre :</p>
+<pre class="sourceCode python"><code class="sourceCode python">MOT_DE_PASSE = <span class="st">&#39;abracadabra&#39;</span>
+
+saisie = <span class="dt">input</span>(<span class="st">&quot;Saisissez votre mot de passe : &quot;</span>)
+
+<span class="kw">if</span> saisie == MOT_DE_PASSE:
+    <span class="dt">print</span>(<span class="st">&quot;Accès autorisé&quot;</span>)
+<span class="kw">else</span>:
+    <span class="dt">print</span>(<span class="st">&quot;Accès refusé&quot;</span>)</code></pre>
+<p>Nous allons découvrir dans la suite comment celui-ci fonctionne en détail. Contentons nous de jouer avec dans un premier temps.</p>
+<h3 id="écrire-un-programme-dans-un-fichier"><a href="#écrire-un-programme-dans-un-fichier"><span class="header-section-number">4.1.1</span> Écrire un programme dans un fichier</a></h3>
+<p>À partir de ce chapitre, nous allons travailler sur des programmes d'exemple. Il existe bien des façons d'exécuter un programme en Python suivant votre système d'exploitation. Pour ne pas surcharger le propos, je me contenterai de vous montrer ici la méthode qui marchera chez tout le monde.</p>
+<p>Ouvrez le programme IDLE livré avec Python. Vous devriez voir apparaître une fenêtre dans le style de la figure 1.</p>
+<figure>
+<img src="src/img/idle.png" alt="La console IDLE" /><figcaption>La console IDLE</figcaption>
+</figure>
+<p>Puis cliquez sur <code>File -&gt; New File</code> ou bien appuyez simultanément sur les touches <code>&lt;Ctrl&gt;</code> et <code>&lt;N&gt;</code>.</p>
+<p>Ceci devrait faire apparaître une fenêtre vide dans laquelle vous pouvez écrire un programme en Python. Recopiez dedans notre programme d'exemple, comme sur la figure 2.</p>
+<figure>
+<img src="src/img/programme_motdepasse.png" alt="Notre programme d&#39;exemple" /><figcaption>Notre programme d'exemple</figcaption>
+</figure>
+<p>Enfin, exécutez ce programme en appuyant sur la touche <code>&lt;F5&gt;</code>. IDLE va vous demander si vous souhaîtez sauvegarder ce fichier au passage, enregistrez-le en lui donnant l'extension <code>.py</code>, par exemple sous le nom <code>motdepasse.py</code>. Une fois ceci fait, le programme se lance dans la console interactive, comme sur la figure 3.</p>
+<figure>
+<img src="src/img/execution.png" alt="Exécution" /><figcaption>Exécution</figcaption>
+</figure>
+<p>Essayez d'exécuter plusieurs fois ce programme avec des mots de passe différents, puis essayez avec le bon : abracadabra. Comme vous pouvez le constater, le programme n'affiche &quot;Accès autorisé&quot; que si vous lui entrez le bon mot de passe.</p>
+<h3 id="jouons"><a href="#jouons"><span class="header-section-number">4.1.2</span> Jouons !</a></h3>
+<p>Avant même de chercher à comprendre comment ce script marche, essayez de le modifier pour changer son comportement. Par exemple:</p>
+<ul>
+<li><p>faites en sorte que le mot de passe soit autre chose que « abracadabra »,</p></li>
+<li><p>traitez l'utilisateur d'idiot lorsqu'il entre le mauvais mot de passe.</p></li>
+</ul>
+<p>C'est une bonne habitude à prendre lorsque vous êtes confronté à un code de ce cours : réussir à bidouiller un programme pour lui faire faire ce que l'on veut, c'est beaucoup plus efficace qu'un long discours théorique !</p>
+<h2 id="vrai-ou-faux"><a href="#vrai-ou-faux"><span class="header-section-number">4.2</span> Vrai ou faux ?</a></h2>
+<h3 id="les-booléens"><a href="#les-booléens"><span class="header-section-number">4.2.1</span> Les booléens</a></h3>
+<p>Je viens de vous dire que si l'ordinateur se pose des questions, il ne peut pas se poser n'importe lesquelles. En fait, les questions qu'il se pose sont des questions <em>logiques</em>, c'est-à-dire qu'elles n'acceptent que deux réponses possibles : oui ou non.</p>
+<p>Par exemple, nous pouvons demander à Python si 2 est inférieur à 38.</p>
+<p>Pour cela, nous allons formuler notre question d'une façon qui va peut-être sembler bizarre. En fait, nous allons <em>affirmer</em> que 2 est inférieur à 38, et Python nous répondra que c'est vrai, au moyen de la valeur spéciale <code>True</code> :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">2</span> &lt; <span class="dv">38</span>
+<span class="ot">True</span></code></pre>
+<p>À l'inverse, si on lui dit que 7 est inférieur à 4, Python nous répondra que c'est faux :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">7</span> &lt; <span class="dv">4</span>
+<span class="ot">False</span></code></pre>
+<p>En programmation, une expression qui peut être vraie (<code>True</code>) ou fausse (<code>False</code>) s'appelle <strong>un prédicat</strong>, et les deux valeurs de vérité possibles d'un prédicat sont un type d'objet à part entière, c'est le type <strong>booléen</strong>. En Python, c'est le type <code>bool</code> :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">type</span>(<span class="ot">True</span>)
+&lt;<span class="kw">class</span> <span class="st">&#39;bool&#39;</span>&gt;
+&gt;&gt;&gt; <span class="dt">type</span>(<span class="ot">False</span>)
+&lt;<span class="kw">class</span> <span class="st">&#39;bool&#39;</span>&gt;</code></pre>
+<h3 id="opérateurs-de-comparaison"><a href="#opérateurs-de-comparaison"><span class="header-section-number">4.2.2</span> Opérateurs de comparaison</a></h3>
 <section class="footnotes">
 <hr />
 <ol>
