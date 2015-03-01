@@ -1,5 +1,5 @@
 CC = pandoc
-FLAGS = --toc --chapters
+FLAGS = --toc --chapters -N
 HTMLFLAGS = -s -t html5 -c default.css -N
 DOCNAME = cours-python3
 SRCDIR = src

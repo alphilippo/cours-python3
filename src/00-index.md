@@ -1,14 +1,16 @@
 ---
 title: Python 3 pour l'apprenti sorcier
 author: "Arnaud Calmettes (nohar)"
+date: \today
 papersize: a4paper
 documentclass: scrreprt
 classoption:
     - 11pt
 header-includes:
-    - \usepackage[french]{babel}
-    - \usepackage[left=3cm, right=3cm, bottom=3cm]{geometry}
+    - \usepackage[left=2cm, right=2cm, bottom=3cm]{geometry}
     - \usepackage{fancyhdr}
+    - \pagestyle{fancy}
+    - \usepackage[french]{babel}
 ...
 
 # Avant-propos {.unnumbered}
