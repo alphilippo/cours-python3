@@ -16,13 +16,12 @@ sûr, il ne se demande pas ce qu'il va manger ce soir ni quel est le sens de sa
 vie, mais il se pose des questions d'ordinateur, qui lui permettent de décider
 *ce qu'il va faire ensuite*.
 
-Par exemple, imaginons un programme qui demande à son utilisateur d'entrer son
-mot de passe pour exécuter une action. À un moment donné de ce programme,
-l'ordinateur va devoir décider si le mot de passe entré par l'utilisateur est
-le bon, et il exécutera une action différente suivant que ce soit le cas ou
-non. Ce genre de carrefour dans l'exécution d'un programme s'appelle un
-**branchement conditionnel**, et c'est ce que nous allons étudier tout au long
-de ce chapitre.
+Par exemple, imaginons un programme qui demande à l'utilisateur d'entrer un mot
+de passe. À un moment donné de ce programme, l'ordinateur va devoir décider si
+le mot de passe entré par l'utilisateur est le bon, et il exécutera une action
+différente suivant que ce soit le cas ou non. Ce genre de carrefour dans
+l'exécution d'un programme s'appelle un **branchement conditionnel**, et c'est
+ce que nous allons étudier tout au long de ce chapitre.
 
 Dans ce chapitre, nous allons apprendre :
 
@@ -35,11 +34,9 @@ Dans ce chapitre, nous allons apprendre :
 Voici un programme qui illustre ce que nous allons apprendre dans ce chapitre :
 
 ```python
-MOT_DE_PASSE = 'abracadabra'
-
 saisie = input("Saisissez votre mot de passe : ")
 
-if saisie == MOT_DE_PASSE:
+if saisie == 'abracadabra':
     print("Accès autorisé")
 else:
     print("Accès refusé")
@@ -108,8 +105,8 @@ n'acceptent que deux réponses possibles : oui ou non.
 Par exemple, nous pouvons demander à Python si 2 est inférieur à 38.
 
 Pour cela, nous allons formuler notre question d'une façon qui va peut-être
-sembler bizarre. En fait, nous allons *affirmer* que 2 est inférieur à 38, et
-Python nous répondra que c'est vrai, au moyen de la valeur spéciale `True` :
+vous sembler bizarre : nous allons *affirmer* que 2 est inférieur à 38,
+et Python nous répondra que si c'est vrai ou faux :
 
 ```python
 >>> 2 < 38
@@ -127,7 +124,7 @@ False
 En programmation, une expression qui peut être vraie (`True`) ou fausse
 (`False`) s'appelle **un prédicat**, et les deux valeurs de vérité possibles
 d'un prédicat sont un type d'objet à part entière, c'est le type **booléen**.
-En Python, c'est le type `bool` :
+Python appelle ces valeurs des `bool` :
 
 ```python
 >>> type(True)
@@ -137,3 +134,95 @@ En Python, c'est le type `bool` :
 ```
 
 ### Opérateurs de comparaison
+
+La plupart des prédicats que nous allons écrire au départ utiliseront des
+opérateurs un peu spéciaux que nous appelons *opérateurs de comparaison*.
+
+Ces opérateurs sont relativement simples à comprendre, ils fonctionnent comme
+en maths :
+
+--------------------------------------------------------
+    Opérateur     Signification
+----------------- --------------------------------------
+     `x < y`      `x` est strictement inférieur à `y`
+
+    `x <= y`      `x` est inférieur ou égal à `y`
+
+    `x == y`      `x` est égal à `y`
+
+    `x != y`      `x` est différent de `y`
+
+    `x >= y`      `x` est supérieur ou égal à `y`
+
+     `x > y`      `x` est strictement supérieur à `y`
+---------------------------------------------------------
+
+Table: Opérateurs de comparaison usuels
+
+> **Remarquez que l'opérateur d'égalité se note `==`, contrairement à
+> l'opérateur d'affectation (`=`) que nous utilisons depuis le début de ce
+> cours.**
+
+Ces opérateurs s'appliquent sur tous les types de données de base que nous
+avons vus jusqu'à présent. Si, pour les nombres leur signification est
+évidente, il y a de quoi être perplexe sur leur utilisation avec des chaînes de
+caractères :
+
+```python
+>>> 'bacon' > 'oeufs'
+False
+>>> 'bacon' != 'oeufs'
+True
+>>> 'bacon' <= 'oeufs'
+True
+>>> 'spam' == 'spam'
+True
+```
+
+En fait, il existe une relation d'ordre sur les chaînes de caractères, que l'on
+appelle pompeusement l'**ordre lexicographique**. Dans les faits, il s'agit
+plus ou moins de l'ordre alphabétique, à ceci près que l'on différentie les
+lettres majuscules et minuscules.
+
+Ne nous attardons pas trop sur l'ordre lexicographique pour le moment. Vous
+pouvez faire des tests dans la console pour comprendre comment celui-ci
+fonctionne, mais en réalité, il y a peu de chances que vous ayiez besoin de
+comparer les chaînes de caractères autrement qu'avec `==` et `!=` avant un bon
+moment. Nous reviendrons sur ce sujet lorsque nous étudierons la façon dont les
+chaînes sont encodées par Python.
+
+### Encadrements
+
+Une particularité des opérateurs de comparaison, à laquelle on pense trop
+rarement, est que ceux-ci peuvent être chaînés pour exprimer des
+*encadrements*. Par exemple, on peut vérifier qu'un nombre est strictement
+compris entre 0 et 10 :
+
+```python
+>>> n = 4
+>>> 0 < n < 10
+True
+```
+
+Ou bien qu'il est strictement positif mais inférieur ou égal à 10:
+
+```python
+>>> n = 10
+>>> 0 < n <= 10
+True
+```
+
+On peut même laisser libre cours à notre fantaisie, en écrivant des tests un
+peu plus alambiqués :
+
+```python
+>>> a, b = 5, 3
+>>> 0 < a < b < 10
+False
+>>> a, b = 3, 5
+>>> 0 < a < b < 10
+True
+```
+
+Gardez bien ces encadrements en tête : ils sont particulièrement efficaces pour
+expliquer des conditions parfois complexes de façon très lisible.

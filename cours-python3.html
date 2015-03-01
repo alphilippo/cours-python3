@@ -33,6 +33,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
   
   
   
+  
 </head>
 <body>
 <header>
@@ -79,6 +80,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#vrai-ou-faux"><span class="toc-section-number">4.2</span> Vrai ou faux ?</a><ul>
 <li><a href="#les-booléens"><span class="toc-section-number">4.2.1</span> Les booléens</a></li>
 <li><a href="#opérateurs-de-comparaison"><span class="toc-section-number">4.2.2</span> Opérateurs de comparaison</a></li>
+<li><a href="#encadrements"><span class="toc-section-number">4.2.3</span> Encadrements</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -619,7 +621,7 @@ Coucou
 <p><em>Douglas Adams -- Le Guide du Voyageur Galactique</em></p>
 </blockquote>
 <p>Vous ne vous en doutez sûrement pas, mais dans la totalité des programmes qu'il exécute, l'ordinateur passe son temps à <strong>se poser des questions</strong>. Oh, bien sûr, il ne se demande pas ce qu'il va manger ce soir ni quel est le sens de sa vie, mais il se pose des questions d'ordinateur, qui lui permettent de décider <em>ce qu'il va faire ensuite</em>.</p>
-<p>Par exemple, imaginons un programme qui demande à son utilisateur d'entrer son mot de passe pour exécuter une action. À un moment donné de ce programme, l'ordinateur va devoir décider si le mot de passe entré par l'utilisateur est le bon, et il exécutera une action différente suivant que ce soit le cas ou non. Ce genre de carrefour dans l'exécution d'un programme s'appelle un <strong>branchement conditionnel</strong>, et c'est ce que nous allons étudier tout au long de ce chapitre.</p>
+<p>Par exemple, imaginons un programme qui demande à l'utilisateur d'entrer un mot de passe. À un moment donné de ce programme, l'ordinateur va devoir décider si le mot de passe entré par l'utilisateur est le bon, et il exécutera une action différente suivant que ce soit le cas ou non. Ce genre de carrefour dans l'exécution d'un programme s'appelle un <strong>branchement conditionnel</strong>, et c'est ce que nous allons étudier tout au long de ce chapitre.</p>
 <p>Dans ce chapitre, nous allons apprendre :</p>
 <ul>
 <li>ce qu'est une valeur <strong>booléenne</strong>,</li>
@@ -628,11 +630,9 @@ Coucou
 </ul>
 <h2 id="notre-programme-dexemple"><a href="#notre-programme-dexemple"><span class="header-section-number">4.1</span> Notre programme d'exemple</a></h2>
 <p>Voici un programme qui illustre ce que nous allons apprendre dans ce chapitre :</p>
-<pre class="sourceCode python"><code class="sourceCode python">MOT_DE_PASSE = <span class="st">&#39;abracadabra&#39;</span>
+<pre class="sourceCode python"><code class="sourceCode python">saisie = <span class="dt">input</span>(<span class="st">&quot;Saisissez votre mot de passe : &quot;</span>)
 
-saisie = <span class="dt">input</span>(<span class="st">&quot;Saisissez votre mot de passe : &quot;</span>)
-
-<span class="kw">if</span> saisie == MOT_DE_PASSE:
+<span class="kw">if</span> saisie == <span class="st">&#39;abracadabra&#39;</span>:
     <span class="dt">print</span>(<span class="st">&quot;Accès autorisé&quot;</span>)
 <span class="kw">else</span>:
     <span class="dt">print</span>(<span class="st">&quot;Accès refusé&quot;</span>)</code></pre>
@@ -656,26 +656,94 @@ saisie = <span class="dt">input</span>(<span class="st">&quot;Saisissez votre mo
 <h3 id="jouons"><a href="#jouons"><span class="header-section-number">4.1.2</span> Jouons !</a></h3>
 <p>Avant même de chercher à comprendre comment ce script marche, essayez de le modifier pour changer son comportement. Par exemple:</p>
 <ul>
-<li><p>faites en sorte que le mot de passe soit autre chose que « abracadabra »,</p></li>
-<li><p>traitez l'utilisateur d'idiot lorsqu'il entre le mauvais mot de passe.</p></li>
+<li><p>Faites en sorte que le mot de passe soit autre chose que « abracadabra ».</p></li>
+<li><p>Traitez l'utilisateur d'idiot lorsqu'il entre le mauvais mot de passe.</p></li>
 </ul>
 <p>C'est une bonne habitude à prendre lorsque vous êtes confronté à un code de ce cours : réussir à bidouiller un programme pour lui faire faire ce que l'on veut, c'est beaucoup plus efficace qu'un long discours théorique !</p>
 <h2 id="vrai-ou-faux"><a href="#vrai-ou-faux"><span class="header-section-number">4.2</span> Vrai ou faux ?</a></h2>
 <h3 id="les-booléens"><a href="#les-booléens"><span class="header-section-number">4.2.1</span> Les booléens</a></h3>
-<p>Je viens de vous dire que si l'ordinateur se pose des questions, il ne peut pas se poser n'importe lesquelles. En fait, les questions qu'il se pose sont des questions <em>logiques</em>, c'est-à-dire qu'elles n'acceptent que deux réponses possibles : oui ou non.</p>
+<p>Je vous ai dit plus haut que même si l'ordinateur se pose des questions à longueur de temps, il ne peut pas se poser n'importe lesquelles. En fait, les questions qu'il se pose sont des questions <em>logiques</em>, c'est-à-dire qu'elles n'acceptent que deux réponses possibles : oui ou non.</p>
 <p>Par exemple, nous pouvons demander à Python si 2 est inférieur à 38.</p>
-<p>Pour cela, nous allons formuler notre question d'une façon qui va peut-être sembler bizarre. En fait, nous allons <em>affirmer</em> que 2 est inférieur à 38, et Python nous répondra que c'est vrai, au moyen de la valeur spéciale <code>True</code> :</p>
+<p>Pour cela, nous allons formuler notre question d'une façon qui va peut-être vous sembler bizarre : nous allons <em>affirmer</em> que 2 est inférieur à 38, et Python nous répondra que si c'est vrai ou faux :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">2</span> &lt; <span class="dv">38</span>
 <span class="ot">True</span></code></pre>
 <p>À l'inverse, si on lui dit que 7 est inférieur à 4, Python nous répondra que c'est faux :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">7</span> &lt; <span class="dv">4</span>
 <span class="ot">False</span></code></pre>
-<p>En programmation, une expression qui peut être vraie (<code>True</code>) ou fausse (<code>False</code>) s'appelle <strong>un prédicat</strong>, et les deux valeurs de vérité possibles d'un prédicat sont un type d'objet à part entière, c'est le type <strong>booléen</strong>. En Python, c'est le type <code>bool</code> :</p>
+<p>En programmation, une expression qui peut être vraie (<code>True</code>) ou fausse (<code>False</code>) s'appelle <strong>un prédicat</strong>, et les deux valeurs de vérité possibles d'un prédicat sont un type d'objet à part entière, c'est le type <strong>booléen</strong>. Python appelle ces valeurs des <code>bool</code> :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dt">type</span>(<span class="ot">True</span>)
 &lt;<span class="kw">class</span> <span class="st">&#39;bool&#39;</span>&gt;
 &gt;&gt;&gt; <span class="dt">type</span>(<span class="ot">False</span>)
 &lt;<span class="kw">class</span> <span class="st">&#39;bool&#39;</span>&gt;</code></pre>
 <h3 id="opérateurs-de-comparaison"><a href="#opérateurs-de-comparaison"><span class="header-section-number">4.2.2</span> Opérateurs de comparaison</a></h3>
+<p>La plupart des prédicats que nous allons écrire au départ utiliseront des opérateurs un peu spéciaux que nous appelons <em>opérateurs de comparaison</em>.</p>
+<p>Ces opérateurs sont relativement simples à comprendre, ils fonctionnent comme en maths :</p>
+<table>
+<caption>Opérateurs de comparaison usuels</caption>
+<col style="width: 25%" /><col style="width: 52%" /><thead>
+<tr class="header">
+<th style="text-align: center;">Opérateur</th>
+<th style="text-align: left;">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>x &lt; y</code></td>
+<td style="text-align: left;"><code>x</code> est strictement inférieur à <code>y</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>x &lt;= y</code></td>
+<td style="text-align: left;"><code>x</code> est inférieur ou égal à <code>y</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>x == y</code></td>
+<td style="text-align: left;"><code>x</code> est égal à <code>y</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>x != y</code></td>
+<td style="text-align: left;"><code>x</code> est différent de <code>y</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>x &gt;= y</code></td>
+<td style="text-align: left;"><code>x</code> est supérieur ou égal à <code>y</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>x &gt; y</code></td>
+<td style="text-align: left;"><code>x</code> est strictement supérieur à <code>y</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Remarquez que l'opérateur d'égalité se note <code>==</code>, contrairement à l'opérateur d'affectation (<code>=</code>) que nous utilisons depuis le début de ce cours.</strong></p>
+</blockquote>
+<p>Ces opérateurs s'appliquent sur tous les types de données de base que nous avons vus jusqu'à présent. Si, pour les nombres leur signification est évidente, il y a de quoi être perplexe sur leur utilisation avec des chaînes de caractères :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="st">&#39;bacon&#39;</span> &gt; <span class="st">&#39;oeufs&#39;</span>
+<span class="ot">False</span>
+&gt;&gt;&gt; <span class="st">&#39;bacon&#39;</span> != <span class="st">&#39;oeufs&#39;</span>
+<span class="ot">True</span>
+&gt;&gt;&gt; <span class="st">&#39;bacon&#39;</span> &lt;= <span class="st">&#39;oeufs&#39;</span>
+<span class="ot">True</span>
+&gt;&gt;&gt; <span class="st">&#39;spam&#39;</span> == <span class="st">&#39;spam&#39;</span>
+<span class="ot">True</span></code></pre>
+<p>En fait, il existe une relation d'ordre sur les chaînes de caractères, que l'on appelle pompeusement l'<strong>ordre lexicographique</strong>. Dans les faits, il s'agit plus ou moins de l'ordre alphabétique, à ceci près que l'on différentie les lettres majuscules et minuscules.</p>
+<p>Ne nous attardons pas trop sur l'ordre lexicographique pour le moment. Vous pouvez faire des tests dans la console pour comprendre comment celui-ci fonctionne, mais en réalité, il y a peu de chances que vous ayiez besoin de comparer les chaînes de caractères autrement qu'avec <code>==</code> et <code>!=</code> avant un bon moment. Nous reviendrons sur ce sujet lorsque nous étudierons la façon dont les chaînes sont encodées par Python.</p>
+<h3 id="encadrements"><a href="#encadrements"><span class="header-section-number">4.2.3</span> Encadrements</a></h3>
+<p>Une particularité des opérateurs de comparaison, à laquelle on pense trop rarement, est que ceux-ci peuvent être chaînés pour exprimer des <em>encadrements</em>. Par exemple, on peut vérifier qu'un nombre est strictement compris entre 0 et 10 :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; n = <span class="dv">4</span>
+&gt;&gt;&gt; <span class="dv">0</span> &lt; n &lt; <span class="dv">10</span>
+<span class="ot">True</span></code></pre>
+<p>Ou bien qu'il est strictement positif mais inférieur ou égal à 10:</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; n = <span class="dv">10</span>
+&gt;&gt;&gt; <span class="dv">0</span> &lt; n &lt;= <span class="dv">10</span>
+<span class="ot">True</span></code></pre>
+<p>On peut même laisser libre cours à notre fantaisie, en écrivant des tests un peu plus alambiqués :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; a, b = <span class="dv">5</span>, <span class="dv">3</span>
+&gt;&gt;&gt; <span class="dv">0</span> &lt; a &lt; b &lt; <span class="dv">10</span>
+<span class="ot">False</span>
+&gt;&gt;&gt; a, b = <span class="dv">3</span>, <span class="dv">5</span>
+&gt;&gt;&gt; <span class="dv">0</span> &lt; a &lt; b &lt; <span class="dv">10</span>
+<span class="ot">True</span></code></pre>
+<p>Gardez bien ces encadrements en tête : ils sont particulièrement efficaces pour expliquer des conditions parfois complexes de façon très lisible.</p>
 <section class="footnotes">
 <hr />
 <ol>
