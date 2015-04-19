@@ -120,4 +120,8 @@ signifie :
 
 ## Installer Python
 
-    TODO
+Il serait difficile d'écrire du code en langage Python si nous ne possédons pas Python sur notre machine. Suivant le système d'exploitation que vous possédez, l'installation peut s'avérer plus ou moins fastidieuse. Mais ne vous inquiétez pas ! Nous couvrirons les procédures d'installation sur les systèmes d'exploitation les plus utilisés.
+
+### Installation sous Windows
+
+Python n'est malheureusement pas disponible par défaut sous les différentes versions du système d'exploitation Windows. Il va donc nous falloir le **télécharger**. Pour ce faire, ouvrez votre navigateur internet favoris et rendez-vous sur l'adresse [https://www.python.org/](https://www.python.org/). Il s'agit du site web de référence du langage Python.
