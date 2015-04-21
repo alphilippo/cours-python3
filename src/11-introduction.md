@@ -124,56 +124,56 @@ Il serait difficile d'écrire du code en langage Python si nous ne possédons pa
 
 ### Installation sous Windows
 
-Python n'est malheureusement pas disponible par défaut sous les différentes versions du système d'exploitation Windows. Il va donc nous falloir le **télécharger**. Pour ce faire, ouvrez votre navigateur internet favoris et rendez-vous sur l'adresse [https://www.python.org/](https://www.python.org/). Il s'agit du site web de référence du langage Python. En visitant le site web indiqué, vous devriez tomber sur la page d'accueil qui ressemble à ceci :
+Python n'est malheureusement pas disponible par défaut sous les différentes versions du système d'exploitation Windows. Il va donc nous falloir le **télécharger**. Pour ce faire, ouvrez votre navigateur internet favoris et rendez-vous sur l'adresse [https://www.python.org/](https://www.python.org/). Il s'agit du site web de référence du langage Python. En visitant le site web indiqué, vous devriez tomber sur la page d'accueil qui ressemble à la figure 1.1.
 
 ![La page d'accueil du site officiel de Python](src/img/windows_install/pythonorg_windows.png)
 
-Sur le bandeau principal, vous pouvez apercevoir les libellés allant de "About" à "Events". Pour notre cas, c'est bien évidemment le libellé "Downloads" qui nous intéresse, puisqu'il signifie "Télécharger" en Français. En survolant ce libellé à l'aide de la souris, vous devriez voir apparaître un menu contextuel sur le dessous, comme présenté sur la figure ci-dessous :
+Sur le bandeau principal, vous pouvez apercevoir les libellés allant de "About" à "Events". Pour notre cas, c'est bien évidemment le libellé "Downloads" qui nous intéresse, puisqu'il signifie "Télécharger" en Français. En survolant ce libellé à l'aide de la souris, vous devriez voir apparaître un menu contextuel sur le dessous, comme présenté sur la figure 1.2.
 
 ![Menu contextuel de téléchargement de Python](src/img/windows_install/download_straight.png)
 
 Vous pouvez voir que vous avez le choix entre deux versions de Python : la **3.4.3** et la **2.7.9**. Puisqu'il s'agit d'un cours entièrement dédié à Python 3, nous allons bien évidemment télécharger la version **3.4.3**. Evidemment, à l'heure où ses lignes sont écrites, il se peut fortement que les numéros de version mineurs aient changé. Heureusement pour nous, cela ne changera pas grand-chose. Si vous avez un numéro de version supérieur à **3.4.3**, cela ne posera aucun problème pour vous. Les changements qui auront effectués concerneront des corrections de bogues et autres joyeusetés.
 
-Ainsi, après avoir cliqué sur le numéro de version à télécharger, le site web vous propose de télécharger le fichier **python-3.4.3.msi**. Enregistrez-le sur votre ordinateur, et exécutez-le. Vous devriez voir apparaître l'assistant d'installation comme montré sur la figure ci-contre :
+Ainsi, après avoir cliqué sur le numéro de version à télécharger, le site web vous propose de télécharger le fichier **python-3.4.3.msi**. Enregistrez-le sur votre ordinateur, et exécutez-le. Vous devriez voir apparaître l'assistant d'installation comme montré sur la figure 1.3.
 
 ![Assistant d'installation de Python, choix des utilisateurs du programme](src/img/windows_install/windows_install_python_1.png)
 
-L'assistant vous demande si vous souhaitez installer Python pour tous les utilisateurs de votre ordinateur, ou juste pour vous. Le choix vous revient et importe peu ici. Sélectionnez l'option de votre choix et cliquez sur `Next >`. Vous obtenez normalement la figure suivante :
+L'assistant vous demande si vous souhaitez installer Python pour tous les utilisateurs de votre ordinateur, ou juste pour vous. Le choix vous revient et importe peu ici. Sélectionnez l'option de votre choix et cliquez sur `Next >`. Vous obtenez normalement la figure 1.4.
 
 ![Assistant d'installation de Python, choix du chemin d'installation](src/img/windows_install/windows_install_python_2.png)
 
-L'assistant vous demande ensuite le chemin d'installation de Python. Par défaut, il s'agit de `C:\Python34\`. Nous vous recommandons de laisser ce chemin par défaut pour plusieurs raisons. D'une part parce que cela évite les désagréments, d'autre part parce que cela permet au binaire python de se trouver proche de la racine du disque dur. Nous verrons en quoi cela est pratique. Cliquez sur `Next >`. L'assistant vous affiche ainsi les options sélectionnées pour l'installation de Python comme le montre lafigure suivante :
+L'assistant vous demande ensuite le chemin d'installation de Python. Par défaut, il s'agit de `C:\Python34\`. Nous vous recommandons de laisser ce chemin par défaut pour plusieurs raisons. D'une part parce que cela évite les désagréments, d'autre part parce que cela permet au binaire python de se trouver proche de la racine du disque dur. Nous verrons en quoi cela est pratique. Cliquez sur `Next >`. L'assistant vous affiche ainsi les options sélectionnées pour l'installation de Python comme le montre la figure 1.5.
 
 ![Assistant d'installation de Python, choix des options d'installation](src/img/windows_install/windows_install_python_3.png)
 
 Vous pouvez voir que la seule option qui n'est pas sélectionnée concerne l'ajout du binaire `python.exe` dans votre variable d'environnement "Path". Lorsque vous exécutez un programme à l'aide de la console Windows, celle-ci va vérifier si le programme ne se trouve pas dans un des chemins contenus dans cette même variable. Si vous décidez d'ajouter python.exe à la variable d'environnement "Path", vous pourrez taper "python" dans l'invite de commande au lieu de devoir taper son chemin complet. C'est là que le fait d'installer Python au plus proche de la racine de votre disque permettra de ne pas taper un nom à rallonge.
 
-Nous vous recommandons cependant d'activer l'option qui ajoute python.exe à la variable d'environnement Path, et ce pour les raisons que nous venons de décrire ci-dessus. Comme montré sur la capture ci-dessus, cliquez sur "Will be installed on local hard drive" et vous devriez obtenir un résultat semblable à la figure ci-contre :
+Nous vous recommandons cependant d'activer l'option qui ajoute python.exe à la variable d'environnement Path, et ce pour les raisons que nous venons de décrire ci-dessus. Comme montré sur la capture ci-dessus, cliquez sur "Will be installed on local hard drive" et vous devriez obtenir un résultat semblable à la figure 1.6.
 
 ![Assistant d'installation de Python, python.exe sera ajouté à la variable d'environnement Path](src/img/windows_install/windows_install_python_4.png)
 
-Cliquez sur `Next >`. L'installation peut enfin démarrer, et vous pouvez obtenir des captures comme celles présentées ci-contre :
+Cliquez sur `Next >`. L'installation peut enfin démarrer, et vous pouvez obtenir des captures comme celles présentées sur les figures 1.7 et 1.8.
 
 ![Assistant d'installation de Python, l'installation démarre enfin !](src/img/windows_install/windows_install_python_5.png)
 
 ![Assistant d'installation de Python, installation d'outils dédiés à Python...](src/img/windows_install/windows_install_python_6.png)
 
-Si l'installation s'est correctement déroulée, l'assistant vous le fait savoir comme le montre la capture ci-dessous :
+Si l'installation s'est correctement déroulée, l'assistant vous le fait savoir comme le montre la figure 1.9.
 
 ![Assistant d'installation de Python, installation terminée](src/img/windows_install/windows_install_python_7.png)
 
 Félicitations, vous venez d'adopter un python sur votre système d'exploitation Windows ! Il ne nous manque plus qu'à le lancer pour tester sa bonne installation.
 
-Ouvrez un invite de commande (Touche Windows+R pour obtenir la commande "Exécuter", ou "Démarrer" puis "cmd" dans la barre de Recherche). Vous devriez obtenir un invite de commande semblable à la figure ci-dessous :
+Ouvrez un invite de commande (Touche Windows+R pour obtenir la commande "Exécuter", ou "Démarrer" puis "cmd" dans la barre de Recherche). Vous devriez obtenir un invite de commande semblable à la figure 1.10.
 
 ![Ligne de commande sous Windows](src/img/windows_install/windows_cmd_1.png)
 
-Pour exécuter python, tapez simplement `python` si vous avez ajouté python.exe à la variable d'environnement "Path". Sinon, tapez `\Python34\python` qui correspond au chemin absolu de python.exe. Les figures ci-dessous démontrent que nous obtenons le même résultat suivant votre cas :
+Pour exécuter python, tapez simplement `python` si vous avez ajouté python.exe à la variable d'environnement "Path". Sinon, tapez `\Python34\python` qui correspond au chemin absolu de python.exe. Les figures 1.11 et 1.12 démontrent que nous obtenons le même résultat suivant votre cas.
 
 ![Ligne de commande sous Windows - Exécution de python grâce à la variable d'environnement Path](src/img/windows_install/windows_cmd_2.png)
 
 ![Ligne de commande sous Windows - Exécution de python via son chemin absolu Path](src/img/windows_install/windows_cmd_3.png)
 
-Pour quitter l'invite de commande python, matérialisé par les trois chevrons `>>>` (nous reviendrons plus tard sur la signification de tout cela), faites la combinaison de touches "Ctrl+Z" ; cela devrait afficher la séquence de caractères "^Z" à l'écran. Tapez `Entrée` : vous avez quitté le programme python sans encombre, comme le montre la capture ci-dessous :
+Pour quitter l'invite de commande python, matérialisé par les trois chevrons `>>>` (nous reviendrons plus tard sur la signification de tout cela), faites la combinaison de touches "Ctrl+Z" ; cela devrait afficher la séquence de caractères "^Z" à l'écran. Tapez `Entrée` : vous avez quitté le programme python sans encombre, comme le montre la figure 1.13.
 
 ![Ligne de commande sous Windows - Quitter Python](src/img/windows_install/windows_cmd_4.png)
