@@ -49,7 +49,9 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#comment-ça-fonctionne"><span class="toc-section-number">1.2.1</span> Comment ça fonctionne ?</a></li>
 <li><a href="#pourquoi-apprendre-python"><span class="toc-section-number">1.2.2</span> Pourquoi apprendre Python ?</a></li>
 </ul></li>
-<li><a href="#installer-python"><span class="toc-section-number">1.3</span> Installer Python</a></li>
+<li><a href="#installer-python"><span class="toc-section-number">1.3</span> Installer Python</a><ul>
+<li><a href="#installation-sous-windows"><span class="toc-section-number">1.3.1</span> Installation sous Windows</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#rencontre-du-troisième-type"><span class="toc-section-number">2</span> Rencontre du troisième type</a><ul>
 <li><a href="#contact"><span class="toc-section-number">2.1</span> Contact</a></li>
@@ -81,6 +83,14 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><a href="#les-booléens"><span class="toc-section-number">4.2.1</span> Les booléens</a></li>
 <li><a href="#opérateurs-de-comparaison"><span class="toc-section-number">4.2.2</span> Opérateurs de comparaison</a></li>
 <li><a href="#encadrements"><span class="toc-section-number">4.2.3</span> Encadrements</a></li>
+</ul></li>
+<li><a href="#exprimer-une-condition"><span class="toc-section-number">4.3</span> Exprimer une condition</a><ul>
+<li><a href="#avec-des-si..."><span class="toc-section-number">4.3.1</span> Avec des &quot;<em>si</em>&quot;...</a></li>
+<li><a href="#remarques-à-propos-de-lindentation-dans-la-console-interactive"><span class="toc-section-number">4.3.2</span> Remarques à propos de l'indentation dans la console interactive</a></li>
+</ul></li>
+<li><a href="#aller-plus-loin"><span class="toc-section-number">4.4</span> Aller plus loin</a><ul>
+<li><a href="#opérateurs-logiques"><span class="toc-section-number">4.4.1</span> Opérateurs logiques</a></li>
+<li><a href="#valeur-logique-des-autres-types-de-données"><span class="toc-section-number">4.4.2</span> Valeur logique des autres types de données</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -128,7 +138,61 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>que vous ne vous retrouverez jamais seul face à un problème puisqu'il existe de nombreuses communautés, y compris francophones, prêtes à aider les débutants.</li>
 </ul>
 <h2 id="installer-python"><a href="#installer-python"><span class="header-section-number">1.3</span> Installer Python</a></h2>
-<pre><code>TODO</code></pre>
+<p>Il serait difficile d'écrire du code en langage Python si nous ne possédons pas Python sur notre machine. Suivant le système d'exploitation que vous possédez, l'installation peut s'avérer plus ou moins fastidieuse. Mais ne vous inquiétez pas ! Nous couvrirons les procédures d'installation sur les systèmes d'exploitation les plus utilisés.</p>
+<h3 id="installation-sous-windows"><a href="#installation-sous-windows"><span class="header-section-number">1.3.1</span> Installation sous Windows</a></h3>
+<p>Python n'est malheureusement pas disponible par défaut sous les différentes versions du système d'exploitation Windows. Il va donc nous falloir le <strong>télécharger</strong>. Pour ce faire, ouvrez votre navigateur internet favoris et rendez-vous sur l'adresse <a href="https://www.python.org/">https://www.python.org/</a>. Il s'agit du site web de référence du langage Python. En visitant le site web indiqué, vous devriez tomber sur la page d'accueil qui ressemble à la figure 1.1.</p>
+<figure>
+<img src="src/img/windows_install/pythonorg_windows.png" alt="La page d&#39;accueil du site officiel de Python" /><figcaption>La page d'accueil du site officiel de Python</figcaption>
+</figure>
+<p>Sur le bandeau principal, vous pouvez apercevoir les libellés allant de &quot;About&quot; à &quot;Events&quot;. Pour notre cas, c'est bien évidemment le libellé &quot;Downloads&quot; qui nous intéresse, puisqu'il signifie &quot;Télécharger&quot; en Français. En survolant ce libellé à l'aide de la souris, vous devriez voir apparaître un menu contextuel sur le dessous, comme présenté sur la figure 1.2.</p>
+<figure>
+<img src="src/img/windows_install/download_straight.png" alt="Menu contextuel de téléchargement de Python" /><figcaption>Menu contextuel de téléchargement de Python</figcaption>
+</figure>
+<p>Vous pouvez voir que vous avez le choix entre deux versions de Python : la <strong>3.4.3</strong> et la <strong>2.7.9</strong>. Puisqu'il s'agit d'un cours entièrement dédié à Python 3, nous allons bien évidemment télécharger la version <strong>3.4.3</strong>. Evidemment, à l'heure où ses lignes sont écrites, il se peut fortement que les numéros de version mineurs aient changé. Heureusement pour nous, cela ne changera pas grand-chose. Si vous avez un numéro de version supérieur à <strong>3.4.3</strong>, cela ne posera aucun problème pour vous. Les changements qui auront effectués concerneront des corrections de bogues et autres joyeusetés.</p>
+<p>Ainsi, après avoir cliqué sur le numéro de version à télécharger, le site web vous propose de télécharger le fichier <strong>python-3.4.3.msi</strong>. Enregistrez-le sur votre ordinateur, et exécutez-le. Vous devriez voir apparaître l'assistant d'installation comme montré sur la figure 1.3.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_1.png" alt="Assistant d&#39;installation de Python, choix des utilisateurs du programme" /><figcaption>Assistant d'installation de Python, choix des utilisateurs du programme</figcaption>
+</figure>
+<p>L'assistant vous demande si vous souhaitez installer Python pour tous les utilisateurs de votre ordinateur, ou juste pour vous. Le choix vous revient et importe peu ici. Sélectionnez l'option de votre choix et cliquez sur <code>Next &gt;</code>. Vous obtenez normalement la figure 1.4.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_2.png" alt="Assistant d&#39;installation de Python, choix du chemin d&#39;installation" /><figcaption>Assistant d'installation de Python, choix du chemin d'installation</figcaption>
+</figure>
+<p>L'assistant vous demande ensuite le chemin d'installation de Python. Par défaut, il s'agit de <code>C:\Python34\</code>. Nous vous recommandons de laisser ce chemin par défaut pour plusieurs raisons. D'une part parce que cela évite les désagréments, d'autre part parce que cela permet au binaire python de se trouver proche de la racine du disque dur. Nous verrons en quoi cela est pratique. Cliquez sur <code>Next &gt;</code>. L'assistant vous affiche ainsi les options sélectionnées pour l'installation de Python comme le montre la figure 1.5.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_3.png" alt="Assistant d&#39;installation de Python, choix des options d&#39;installation" /><figcaption>Assistant d'installation de Python, choix des options d'installation</figcaption>
+</figure>
+<p>Vous pouvez voir que la seule option qui n'est pas sélectionnée concerne l'ajout du binaire <code>python.exe</code> dans votre variable d'environnement &quot;Path&quot;. Lorsque vous exécutez un programme à l'aide de la console Windows, celle-ci va vérifier si le programme ne se trouve pas dans un des chemins contenus dans cette même variable. Si vous décidez d'ajouter python.exe à la variable d'environnement &quot;Path&quot;, vous pourrez taper &quot;python&quot; dans l'invite de commande au lieu de devoir taper son chemin complet. C'est là que le fait d'installer Python au plus proche de la racine de votre disque permettra de ne pas taper un nom à rallonge.</p>
+<p>Nous vous recommandons cependant d'activer l'option qui ajoute python.exe à la variable d'environnement Path, et ce pour les raisons que nous venons de décrire ci-dessus. Comme montré sur la capture ci-dessus, cliquez sur &quot;Will be installed on local hard drive&quot; et vous devriez obtenir un résultat semblable à la figure 1.6.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_4.png" alt="Assistant d&#39;installation de Python, python.exe sera ajouté à la variable d&#39;environnement Path" /><figcaption>Assistant d'installation de Python, python.exe sera ajouté à la variable d'environnement Path</figcaption>
+</figure>
+<p>Cliquez sur <code>Next &gt;</code>. L'installation peut enfin démarrer, et vous pouvez obtenir des captures comme celles présentées sur les figures 1.7 et 1.8.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_5.png" alt="Assistant d&#39;installation de Python, l&#39;installation démarre enfin !" /><figcaption>Assistant d'installation de Python, l'installation démarre enfin !</figcaption>
+</figure>
+<figure>
+<img src="src/img/windows_install/windows_install_python_6.png" alt="Assistant d&#39;installation de Python, installation d&#39;outils dédiés à Python..." /><figcaption>Assistant d'installation de Python, installation d'outils dédiés à Python...</figcaption>
+</figure>
+<p>Si l'installation s'est correctement déroulée, l'assistant vous le fait savoir comme le montre la figure 1.9.</p>
+<figure>
+<img src="src/img/windows_install/windows_install_python_7.png" alt="Assistant d&#39;installation de Python, installation terminée" /><figcaption>Assistant d'installation de Python, installation terminée</figcaption>
+</figure>
+<p>Félicitations, vous venez d'adopter un python sur votre système d'exploitation Windows ! Il ne nous manque plus qu'à le lancer pour tester sa bonne installation.</p>
+<p>Ouvrez un invite de commande (Touche Windows+R pour obtenir la commande &quot;Exécuter&quot;, ou &quot;Démarrer&quot; puis &quot;cmd&quot; dans la barre de Recherche). Vous devriez obtenir un invite de commande semblable à la figure 1.10.</p>
+<figure>
+<img src="src/img/windows_install/windows_cmd_1.png" alt="Ligne de commande sous Windows" /><figcaption>Ligne de commande sous Windows</figcaption>
+</figure>
+<p>Pour exécuter python, tapez simplement <code>python</code> si vous avez ajouté python.exe à la variable d'environnement &quot;Path&quot;. Sinon, tapez <code>\Python34\python</code> qui correspond au chemin absolu de python.exe. Les figures 1.11 et 1.12 démontrent que nous obtenons le même résultat suivant votre cas.</p>
+<figure>
+<img src="src/img/windows_install/windows_cmd_2.png" alt="Ligne de commande sous Windows - Exécution de python grâce à la variable d&#39;environnement Path" /><figcaption>Ligne de commande sous Windows - Exécution de python grâce à la variable d'environnement Path</figcaption>
+</figure>
+<figure>
+<img src="src/img/windows_install/windows_cmd_3.png" alt="Ligne de commande sous Windows - Exécution de python via son chemin absolu Path" /><figcaption>Ligne de commande sous Windows - Exécution de python via son chemin absolu Path</figcaption>
+</figure>
+<p>Pour quitter l'invite de commande python, matérialisé par les trois chevrons <code>&gt;&gt;&gt;</code> (nous reviendrons plus tard sur la signification de tout cela), faites la combinaison de touches &quot;Ctrl+Z&quot; ; cela devrait afficher la séquence de caractères &quot;^Z&quot; à l'écran. Tapez <code>Entrée</code> : vous avez quitté le programme python sans encombre, comme le montre la figure 1.13.</p>
+<figure>
+<img src="src/img/windows_install/windows_cmd_4.png" alt="Ligne de commande sous Windows - Quitter Python" /><figcaption>Ligne de commande sous Windows - Quitter Python</figcaption>
+</figure>
 <h1 id="rencontre-du-troisième-type"><a href="#rencontre-du-troisième-type"><span class="header-section-number">2</span> Rencontre du troisième type</a></h1>
 <blockquote>
 <p>Le renard se tut et regarda longtemps le petit prince :</p>
@@ -664,7 +728,7 @@ Coucou
 <h3 id="les-booléens"><a href="#les-booléens"><span class="header-section-number">4.2.1</span> Les booléens</a></h3>
 <p>Je vous ai dit plus haut que même si l'ordinateur se pose des questions à longueur de temps, il ne peut pas se poser n'importe lesquelles. En fait, les questions qu'il se pose sont des questions <em>logiques</em>, c'est-à-dire qu'elles n'acceptent que deux réponses possibles : oui ou non.</p>
 <p>Par exemple, nous pouvons demander à Python si 2 est inférieur à 38.</p>
-<p>Pour cela, nous allons formuler notre question d'une façon qui va peut-être vous sembler bizarre : nous allons <em>affirmer</em> que 2 est inférieur à 38, et Python nous répondra que si c'est vrai ou faux :</p>
+<p>Pour cela, nous allons formuler notre question d'une façon qui va peut-être vous sembler bizarre : nous allons <em>affirmer</em> que 2 est inférieur à 38, et Python nous répondra si c'est vrai ou faux.</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="dv">2</span> &lt; <span class="dv">38</span>
 <span class="ot">True</span></code></pre>
 <p>À l'inverse, si on lui dit que 7 est inférieur à 4, Python nous répondra que c'est faux :</p>
@@ -726,7 +790,7 @@ Coucou
 &gt;&gt;&gt; <span class="st">&#39;spam&#39;</span> == <span class="st">&#39;spam&#39;</span>
 <span class="ot">True</span></code></pre>
 <p>En fait, il existe une relation d'ordre sur les chaînes de caractères, que l'on appelle pompeusement l'<strong>ordre lexicographique</strong>. Dans les faits, il s'agit plus ou moins de l'ordre alphabétique, à ceci près que l'on différentie les lettres majuscules et minuscules.</p>
-<p>Ne nous attardons pas trop sur l'ordre lexicographique pour le moment. Vous pouvez faire des tests dans la console pour comprendre comment celui-ci fonctionne, mais en réalité, il y a peu de chances que vous ayiez besoin de comparer les chaînes de caractères autrement qu'avec <code>==</code> et <code>!=</code> avant un bon moment. Nous reviendrons sur ce sujet lorsque nous étudierons la façon dont les chaînes sont encodées par Python.</p>
+<p>Ne nous attardons pas sur l'ordre lexicographique pour le moment. Vous pouvez faire des tests dans la console pour comprendre comment celui-ci fonctionne, mais en réalité, il y a peu de chances que vous ayiez besoin de comparer les chaînes de caractères autrement qu'avec <code>==</code> et <code>!=</code> avant un bon moment. Nous reviendrons sur ce sujet lorsque nous étudierons la façon dont les chaînes sont encodées par Python.</p>
 <h3 id="encadrements"><a href="#encadrements"><span class="header-section-number">4.2.3</span> Encadrements</a></h3>
 <p>Une particularité des opérateurs de comparaison, à laquelle on pense trop rarement, est que ceux-ci peuvent être chaînés pour exprimer des <em>encadrements</em>. Par exemple, on peut vérifier qu'un nombre est strictement compris entre 0 et 10 :</p>
 <pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; n = <span class="dv">4</span>
@@ -744,6 +808,56 @@ Coucou
 &gt;&gt;&gt; <span class="dv">0</span> &lt; a &lt; b &lt; <span class="dv">10</span>
 <span class="ot">True</span></code></pre>
 <p>Gardez bien ces encadrements en tête : ils sont particulièrement efficaces pour expliquer des conditions parfois complexes de façon très lisible.</p>
+<h2 id="exprimer-une-condition"><a href="#exprimer-une-condition"><span class="header-section-number">4.3</span> Exprimer une condition</a></h2>
+<p>Même si nous n'en avons pas encore fini avec les prédicats, ce que nous venons de voir est largement suffisant pour comprendre notre programme d'exemple, puisque celui-ci compare une entrée saisie par l'utilisateur au mot de passe <code>&quot;abracadabra&quot;</code> :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; saisie = <span class="st">&quot;Sésame ouvre toi !&quot;</span>
+&gt;&gt;&gt; saisie == <span class="st">&quot;abracadabra&quot;</span>
+<span class="ot">False</span>
+&gt;&gt;&gt; saisie = <span class="st">&quot;abracadabra&quot;</span>
+&gt;&gt;&gt; saisie == <span class="st">&quot;abracadabra&quot;</span>
+<span class="ot">True</span></code></pre>
+<h3 id="avec-des-si..."><a href="#avec-des-si..."><span class="header-section-number">4.3.1</span> Avec des &quot;<em>si</em>&quot;...</a></h3>
+<p>Il ne nous reste plus qu'à comprendre comment Python se débrouille pour exécuter des actions différentes selon que le mot de passe entré est le bon ou non. En fait, cela s'exprime de façon assez naturelle :</p>
+<ul>
+<li><strong>Si</strong> la saisie est égale à <code>&quot;abracadabra&quot;</code> : j'affiche <code>&quot;Accès autorisé&quot;</code>.</li>
+<li><strong>Sinon</strong> : j'affiche <code>&quot;Accès refusé&quot;</code>.</li>
+</ul>
+<p>Les deux mots que j'ai mis en gras, (« <em>si</em> » et « <em>sinon</em> »), se traduisent en anglais, respectivement, par « <em>if</em> » et « <em>else</em> ». Concentrons-nous sur la première phrase :</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">if</span> saisie == <span class="st">&#39;abracadabra&#39;</span>:     <span class="co"># Si la saisie est égale à &#39;abracadabra&#39;</span>
+    <span class="dt">print</span>(<span class="st">&#39;Accès autorisé&#39;</span>)     <span class="co"># J&#39;affiche &#39;accès autorisé&#39;</span></code></pre>
+<p>Notez que tout ce qui se trouve derrière le symbole <code>#</code> désigne des <em>commentaires</em>. Python ne tient pas compte de ce qui est écrit après ce symbole, donc il s'agit d'un moyen très pratique d'expliquer ce que l'on est en train de faire.</p>
+<p>La première ligne désigne une <em>condition</em>, introduite par la syntaxe <code>if [predicat]:</code> (n'oubliez pas le <code>:</code>), elle sert à introduire un <em>bloc</em> d'instructions qui seront exécutées uniquement si le prédicat est vérifié.</p>
+<p>Ainsi :</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">if</span> <span class="ot">True</span>:
+    <span class="dt">print</span>(<span class="st">&quot;Ce texte sera tout le temps affiché&quot;</span>)
+
+<span class="kw">if</span> <span class="ot">False</span>:
+    <span class="dt">print</span>(<span class="st">&quot;Ce texte ne sera jamais affiché&quot;</span>)</code></pre>
+<p>Notez que les instructions à l'intérieur de ce bloc sont <em>indentées</em>, c'est-à-dire décalées de quatre espaces par rapport à la ligne du dessus. Cette indentation est <strong>obligatoire</strong> en Python. C'est de cette façon qu'il différencie les instructions à exécuter tout le temps, de celles qui appartiennent au bloc conditionnel.</p>
+<h3 id="remarques-à-propos-de-lindentation-dans-la-console-interactive"><a href="#remarques-à-propos-de-lindentation-dans-la-console-interactive"><span class="header-section-number">4.3.2</span> Remarques à propos de l'indentation dans la console interactive</a></h3>
+<p>Essayons d'écrire la ligne <code>if</code> dans la console Python:</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; age = <span class="dv">25</span>
+&gt;&gt;&gt; <span class="kw">if</span> age &gt;= <span class="dv">18</span>:
+...     <span class="dt">print</span>(<span class="st">&#39;Vous êtes majeur.&#39;</span>)
+...
+Vous êtes majeur
+&gt;&gt;&gt;</code></pre>
+<p>Remarquez que l'interpréteur nous montre ces fameux trois points pour nous indiquer qu'il a besoin de plus de lignes avant d'évaluer notre code. Si on omet d'indenter la seconde ligne, l'interpréteur nous crache au visage :</p>
+<pre class="sourceCode python"><code class="sourceCode python">&gt;&gt;&gt; <span class="kw">if</span> age &gt;= <span class="dv">18</span>:
+... <span class="dt">print</span>(<span class="st">&quot;Vous êtes majeur&quot;</span>)
+  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">2</span>
+    <span class="dt">print</span>(<span class="st">&quot;Vous êtes majeur&quot;</span>)
+        ^
+<span class="ot">IndentationError</span>: expected an indented block</code></pre>
+<p>La ligne la plus importante est la dernière, qui signifie, littéralement : « <em>Erreur d'indentation : j'attendais un bloc indenté</em> ». C'est plutôt sympa de sa part, remarquez : Python nous explique exactement ce qui le gêne au lieu de se contenter de râler.</p>
+<h2 id="aller-plus-loin"><a href="#aller-plus-loin"><span class="header-section-number">4.4</span> Aller plus loin</a></h2>
+<h3 id="opérateurs-logiques"><a href="#opérateurs-logiques"><span class="header-section-number">4.4.1</span> Opérateurs logiques</a></h3>
+<p>Le nom du type <code>bool</code>, aussi cool soit-il, n'est pas dû au hasard. Il vient du nom du célèbre mathématicien George Boole, à qui nous devons la logique moderne. Pour la petite histoire, Boole a créé l'algèbre qui décrit les relations entre plusieurs propositions logiques.</p>
+<p>En ce qui nous concerne, en Python, cette algèbre va se traduire par les opérateurs que l'on peut appliquer aux booléens, et qui permettent de créer des expressions logiques complexes.</p>
+<h4 id="le-et-logique-and"><a href="#le-et-logique-and"><span class="header-section-number">4.4.1.1</span> Le ET logique : <code>and</code></a></h4>
+<h4 id="le-ou-logique-or"><a href="#le-ou-logique-or"><span class="header-section-number">4.4.1.2</span> Le OU logique : <code>or</code></a></h4>
+<h4 id="la-négation-not"><a href="#la-négation-not"><span class="header-section-number">4.4.1.3</span> La négation : <code>not</code></a></h4>
+<h3 id="valeur-logique-des-autres-types-de-données"><a href="#valeur-logique-des-autres-types-de-données"><span class="header-section-number">4.4.2</span> Valeur logique des autres types de données</a></h3>
 <section class="footnotes">
 <hr />
 <ol>

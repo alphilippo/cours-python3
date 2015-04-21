@@ -106,7 +106,7 @@ Par exemple, nous pouvons demander à Python si 2 est inférieur à 38.
 
 Pour cela, nous allons formuler notre question d'une façon qui va peut-être
 vous sembler bizarre : nous allons *affirmer* que 2 est inférieur à 38,
-et Python nous répondra que si c'est vrai ou faux :
+et Python nous répondra si c'est vrai ou faux.
 
 ```python
 >>> 2 < 38
@@ -184,7 +184,7 @@ appelle pompeusement l'**ordre lexicographique**. Dans les faits, il s'agit
 plus ou moins de l'ordre alphabétique, à ceci près que l'on différentie les
 lettres majuscules et minuscules.
 
-Ne nous attardons pas trop sur l'ordre lexicographique pour le moment. Vous
+Ne nous attardons pas sur l'ordre lexicographique pour le moment. Vous
 pouvez faire des tests dans la console pour comprendre comment celui-ci
 fonctionne, mais en réalité, il y a peu de chances que vous ayiez besoin de
 comparer les chaînes de caractères autrement qu'avec `==` et `!=` avant un bon
@@ -226,3 +226,114 @@ True
 
 Gardez bien ces encadrements en tête : ils sont particulièrement efficaces pour
 expliquer des conditions parfois complexes de façon très lisible.
+
+## Exprimer une condition
+
+Même si nous n'en avons pas encore fini avec les prédicats, ce que nous venons
+de voir est largement suffisant pour comprendre notre programme d'exemple,
+puisque celui-ci compare une entrée saisie par l'utilisateur au mot de passe
+`"abracadabra"` :
+
+```python
+>>> saisie = "Sésame ouvre toi !"
+>>> saisie == "abracadabra"
+False
+>>> saisie = "abracadabra"
+>>> saisie == "abracadabra"
+True
+```
+
+### Avec des "*si*"...
+
+Il ne nous reste plus qu'à comprendre comment Python se débrouille pour
+exécuter des actions différentes selon que le mot de passe entré est le bon ou
+non. En fait, cela s'exprime de façon assez naturelle :
+
+* **Si** la saisie est égale à `"abracadabra"` : j'affiche `"Accès autorisé"`.
+* **Sinon** : j'affiche `"Accès refusé"`.
+
+Les deux mots que j'ai mis en gras, (« *si* » et « *sinon* »), se traduisent en
+anglais, respectivement, par « *if* » et « *else* ». Concentrons-nous sur la
+première phrase :
+
+```python
+if saisie == 'abracadabra':     # Si la saisie est égale à 'abracadabra'
+    print('Accès autorisé')     # J'affiche 'accès autorisé'
+```
+
+Notez que tout ce qui se trouve derrière le symbole `#` désigne des *commentaires*.
+Python ne tient pas compte de ce qui est écrit après ce symbole, donc il s'agit d'un
+moyen très pratique d'expliquer ce que l'on est en train de faire.
+
+La première ligne désigne une *condition*, introduite par la syntaxe `if
+[predicat]:` (n'oubliez pas le `:`), elle sert à introduire un *bloc*
+d'instructions qui seront exécutées uniquement si le prédicat est vérifié.
+
+Ainsi :
+
+```python
+if True:
+    print("Ce texte sera tout le temps affiché")
+
+if False:
+    print("Ce texte ne sera jamais affiché")
+```
+
+Notez que les instructions à l'intérieur de ce bloc sont *indentées*,
+c'est-à-dire décalées de quatre espaces par rapport à la ligne du dessus. Cette
+indentation est **obligatoire** en Python. C'est de cette façon qu'il
+différencie les instructions à exécuter tout le temps, de celles qui
+appartiennent au bloc conditionnel.
+
+
+### Remarques à propos de l'indentation dans la console interactive
+
+Essayons d'écrire la ligne `if` dans la console Python:
+
+```python
+>>> age = 25
+>>> if age >= 18:
+...     print('Vous êtes majeur.')
+...
+Vous êtes majeur
+>>>
+```
+
+Remarquez que l'interpréteur nous montre ces fameux trois points pour nous
+indiquer qu'il a besoin de plus de lignes avant d'évaluer notre code. Si on
+omet d'indenter la seconde ligne, l'interpréteur nous crache au visage :
+
+```python
+>>> if age >= 18:
+... print("Vous êtes majeur")
+  File "<stdin>", line 2
+    print("Vous êtes majeur")
+        ^
+IndentationError: expected an indented block
+```
+
+La ligne la plus importante est la dernière, qui signifie, littéralement :
+« *Erreur d'indentation : j'attendais un bloc indenté* ». C'est plutôt sympa de
+sa part, remarquez : Python nous explique exactement ce qui le gêne au lieu de
+se contenter de râler.
+
+## Aller plus loin
+
+### Opérateurs logiques
+
+Le nom du type `bool`, aussi cool soit-il, n'est pas dû au hasard. Il vient du
+nom du célèbre mathématicien George Boole, à qui nous devons la logique moderne.
+Pour la petite histoire, Boole a créé l'algèbre qui décrit les relations entre
+plusieurs propositions logiques.
+
+En ce qui nous concerne, en Python, cette algèbre va se traduire par les
+opérateurs que l'on peut appliquer aux booléens, et qui permettent de créer des
+expressions logiques complexes.
+
+#### Le ET logique : `and`
+
+#### Le OU logique : `or`
+
+#### La négation : `not`
+
+### Valeur logique des autres types de données
