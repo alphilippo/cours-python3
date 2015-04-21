@@ -126,3 +126,4 @@ Il serait difficile d'écrire du code en langage Python si nous ne possédons pa
 
 Python n'est malheureusement pas disponible par défaut sous les différentes versions du système d'exploitation Windows. Il va donc nous falloir le **télécharger**. Pour ce faire, ouvrez votre navigateur internet favoris et rendez-vous sur l'adresse [https://www.python.org/](https://www.python.org/). Il s'agit du site web de référence du langage Python. En visitant le site web indiqué, vous devriez tomber sur la page d'accueil qui ressemble à ceci :
 
+![La page d'accueil du site officiel de Python](src/img/windows_install/pythonorg_windows.png)
