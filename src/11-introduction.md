@@ -53,7 +53,7 @@ son nom à la passion de son créateur pour les célèbres Monty Python, auxquel
 on peut trouver d'innombrables références dans la documentation.
 
 Aujourd'hui, après plus de deux décennies d'existence, Python est dans sa
-troisième version majeure. À au moment où sont écrites ces lignes, la dernière
+troisième version majeure. Au moment où sont écrites ces lignes, la dernière
 version stable du langage est la 3.4.
 
 
@@ -153,7 +153,7 @@ Evidemment, à l'heure où ses lignes sont écrites, il se peut fortement que le
 numéros de version mineurs aient changé. Heureusement pour nous, cela ne
 changera pas grand-chose. Si vous avez un numéro de version supérieur à
 **3.4.3**, cela ne posera aucun problème pour vous. Les changements qui auront
-effectués concerneront des corrections de bogues et autres joyeusetés.
+été effectués concerneront des corrections de bogues et autres joyeusetés.
 
 Ainsi, après avoir cliqué sur le numéro de version à télécharger, le site web
 vous propose de télécharger le fichier **python-3.4.3.msi**. Enregistrez-le sur
@@ -226,7 +226,7 @@ que nous obtenons le même résultat suivant votre cas.
 
 ![Ligne de commande sous Windows - Exécution de python grâce à la variable d'environnement Path](src/img/windows_install/windows_cmd_2.png)
 
-![Ligne de commande sous Windows - Exécution de python via son chemin absolu Path](src/img/windows_install/windows_cmd_3.png)
+![Ligne de commande sous Windows - Exécution de python via son chemin absolu](src/img/windows_install/windows_cmd_3.png)
 
 Pour quitter l'invite de commande python, matérialisé par les trois chevrons
 `>>>` (nous reviendrons plus tard sur la signification de tout cela), faites la
