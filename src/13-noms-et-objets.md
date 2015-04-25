@@ -209,7 +209,7 @@ séparer les mots d'un *underscore*. Ainsi, préférez `pos_joueur` à `PosJoueu
   pas créer des variables portant ce nom**. En voici la liste pour Python 3 :
 
 +----------+---------+--------+----------+-------+
-|`and`     |`del`    |`from`  |`none`    |`true` |
+|`and`     |`del`    |`from`  |`None`    |`True` |
 +----------+---------+--------+----------+-------+
 |`as`      |`elif`   |`global`|`nonlocal`|`try`  |
 +----------+---------+--------+----------+-------+
@@ -217,7 +217,7 @@ séparer les mots d'un *underscore*. Ainsi, préférez `pos_joueur` à `PosJoueu
 +----------+---------+--------+----------+-------+
 |`break`   |`except` |`import`|`or`      |`with` |
 +----------+---------+--------+----------+-------+
-|`class`   |`false`  |`in`    |`pass`    |`yield`|
+|`class`   |`False`  |`in`    |`pass`    |`yield`|
 +----------+---------+--------+----------+-------+
 |`continue`|`finally`|`is`    |`raise`   |       |
 +----------+---------+--------+----------+-------+
@@ -670,8 +670,8 @@ obteniez dans la console le résultat suivant :
 
 Ne trichez pas ! `x, y = 54, 38` n'est pas une solution valide. ;)
 
-Votre code doit permuter ces deux variables quel que soit leurs valeurs.  À
-titre d'indication, il existe deux solutions : la première en trois
+Votre code doit permuter ces deux variables quelles que soient leurs valeurs. 
+À titre d'indication, il existe deux solutions : la première en trois
 instructions, la seconde en une seule ligne.
 
 Bonne chance !
