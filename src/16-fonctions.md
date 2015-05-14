@@ -24,7 +24,7 @@ différencier? Et bien, on appelle une fonction par son *nom*. Ce dernier est
 défini au moment de la création de la fonction. C'est pourquoi, il est
 conseiller de donner des noms clairs et explicits à vos fonctions. Ceci vous
 permettra de ne pas chercher le nom de votre fonction et de vous souvenir de
-son utilité plus facilement. Par exemple, `afficheMenu` est un nom clair
+son utilité plus facilement. Par exemple, `affiche_menu` est un nom clair
 décrivant le rôle de cette fonction et facile à retenir comparer à un nom plus
 court donné à la va-vite tel que `f1`.
 
@@ -37,21 +37,20 @@ répercutera alors automatiquement sur tous vos appels à cette fonction.
 
 [[information]]
 | Il faut également noter que rien n'empêche une fonction d'en appeler une
-| autre. Par exemple `afficheMenu` pourrait d'abord appeler une fonction
-| 'effaceConsole'.
+| autre. Par exemple `affiche_menu` pourrait d'abord appeler une fonction
+| 'efface_console'.
 |
-| Une fonction peut même s'appeler elle-même : c'est la *récursivité*. Une
-| partie sera consacrée à la récursivité plus loin (ref) (ou pas?)
+| Une fonction peut même s'appeler elle-même : c'est la *récursivité*.
 
 # Les fonctions en Python
 
 Abordons maintenant l'implémentation en Python de ce concept de fonction. Nous
 allons continuer sur notre exemple précédent et créer une fonction
-`afficheMenu`. La *définition* d'une fonction suis la structure suivante :
+`affiche_menu`. La *définition* d'une fonction suis la structure suivante :
 
 ```python
 #Code hors fonction
-def nomFonction():
+def nom_fonction():
     #Code de la fonction
 #Code hors fonction
 ```
@@ -66,8 +65,8 @@ de la fonction.
 Voyons maintenant ce que pourrais donner notre fonction exemple :
 
 ```python
-def afficheMenu():
-    print("Menu :\n")
+def affiche_menu():
+    print("Menu :")
     print("* Action 1")
     print("* Action 2")
     #Et ainsi de suite
@@ -77,7 +76,7 @@ d'utiliser :
 
 ```python
 #Du code
-afficheMenu()
+affiche_menu()
 #Encore du code
 ```
 
@@ -102,7 +101,7 @@ return input("Sélection: ") #on peut également renvoyer le retour d'une autre 
 Notre exemple devient alors :
 
 ```python
-def afficheMenu():
+def affiche_menu():
     print("Menu :")
     print("* Action 1")
     print("* Action 2")
