@@ -37,6 +37,34 @@ répercutera alors automatiquement sur tous vos appels à cette fonction.
 
 # Les fonctions en Python
 
+Abordons maintenant l'implémentation en Python de ce concept de fonction. Nous allons continuer sur notre exemple précédent et créer une fonction `afficheMenu`. La *définition* d'une fonction suis la structure suivante :
+
+```python
+#Code hors fonction
+def nomFonction():
+    #Code de la fonction
+#Code hors fonction
+```
+
+Détaillons un peu tout ça. `def` est le mot clé indiquant à Python que l'on est en train de définir une fonction. `nomFonction` est le nom de la fonction. C'est celui que nous utiliserons pour appeler la fonction. Viens ensuite le code de la fonction qui sera exécuté à chaque appel. Noter bien l'indentation du code dans la fonction. La réduction d'un niveau d'indention délimite la fin de la fonction.
+
+Voyons maintenant ce que pourrais donner notre fonction exemple :
+
+```python
+def afficheMenu():
+    print("Menu :\n")
+    print("* Action 1")
+    print("* Action 2")
+    #Et ainsi de suite
+```
+Maintenant, à chauque fois que vous voulez afficher ce menu, il suffit d'utiliser :
+
+```python
+#Du code
+afficheMenu()
+#Encore du code
+```
+
 ## Renvoyer un résultat
 
 ## Les paramètres
