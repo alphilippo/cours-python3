@@ -35,12 +35,11 @@ menu ou corriger un bug, il vous suffit maintenant de modifier la
 *déclaration*, aussi appeler *définition*, de la fonction. Ce changement se
 répercutera alors automatiquement sur tous vos appels à cette fonction.
 
-[[information]]
-| Il faut également noter que rien n'empêche une fonction d'en appeler une
-| autre. Par exemple `affiche_menu` pourrait d'abord appeler une fonction
-| 'efface_console'.
-|
-| Une fonction peut même s'appeler elle-même : c'est la *récursivité*.
+> Il faut également noter que rien n'empêche une fonction d'en appeler une
+> autre. Par exemple `affiche_menu` pourrait d'abord appeler une fonction
+> 'efface_console'.
+>
+> Une fonction peut même s'appeler elle-même : c'est la *récursivité*.
 
 # Les fonctions en Python
 
@@ -109,21 +108,20 @@ def affiche_menu():
     return input("Choix: ") #renvoie le choix de l'utilisateur
 ```
 
-[[information]]
-| Il faut noter que `return` interrompt la fonction, c'est à dire que tout code
-| se trouvant après un `return` ne sera pas exécuté.
-|
-| ```python
-| return False
-| print("Non") #ne sera pas exécuté
-| ```
-| Cependant :
-|
-| ```python
-| if 'toto' == input():
-|     return False
-| print("Non") #sera exécuté si le texte tapé est différent de 'toto'
-| ```
+> Il faut noter que `return` interrompt la fonction, c'est à dire que tout code
+> se trouvant après un `return` ne sera pas exécuté.
+>
+> ```python
+> return False
+> print("Non") #ne sera pas exécuté
+> ```
+> Cependant :
+>
+> ```python
+> if 'toto' == input():
+>     return False
+> print("Non") #sera exécuté si le texte tapé est différent de 'toto'
+> ```
 
 ## Les paramètres
 
