@@ -90,7 +90,8 @@ renvoyer un résultat, un peu à la manière de `input` justement.
 
 ## Renvoyer un résultat
 
-*Renvoyer* ou *retourner* un résultat s'effectue à l'aide du mot-clé `return` suivit de ce que vous désirez renvoyer. Quelque exemples :
+*Renvoyer* ou *retourner* un résultat s'effectue à l'aide du mot-clé `return`
+suivit de ce que vous désirez renvoyer. Quelque exemples :
 
 ```python
 return True #renverra toujours la même valeur.
@@ -117,7 +118,7 @@ def afficheMenu():
 | return False
 | print("Non") #ne sera pas exécuté
 | ```
-| Il faut cependant noter que :
+| Cependant :
 |
 | ```python
 | if 'toto' == input():
