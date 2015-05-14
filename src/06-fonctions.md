@@ -26,7 +26,7 @@ conseiller de donner des noms clairs et explicits à vos fonctions. Ceci vous
 permettra de ne pas chercher le nom de votre fonction et de vous souvenir de
 son utilité plus facilement. Par exemple, `afficheMenu` est un nom clair
 décrivant le rôle de cette fonction et facile à retenir comparer à un nom plus
-court donné à la va-vite tel que `f1`.  
+court donné à la va-vite tel que `f1`.
 
 Revenons sur les avantages de cette méthode : votre code est maintenant plus
 court car l'affichage de votre menu est définit à un endroit unique au lieu de
@@ -34,6 +34,14 @@ se répéter plusieurs fois. De plus, si vous voulez modifier les choix de votre
 menu ou corriger un bug, il vous suffit maintenant de modifier la
 *déclaration*, aussi appeler *définition*, de la fonction. Ce changement se
 répercutera alors automatiquement sur tous vos appels à cette fonction.
+
+[[information]]
+| Il faut également noter que rien n'empêche une fonction d'en appeler une
+| autre. Par exemple `afficheMenu` pourrait d'abord appeler une fonction
+| 'effaceConsole'.
+|
+| Une fonction peut même s'appeler elle-même : c'est la *récursivité*. Une
+| partie sera consacrée à la récursivité plus loin (ref) (ou pas?)
 
 # Les fonctions en Python
 
@@ -73,7 +81,49 @@ afficheMenu()
 #Encore du code
 ```
 
+Il est néanmoins très probable qu'après l'appel de cette fonction, vous
+utilisiez `input` pour récupérer le choix de l'utilisateur. Cette instruction
+est redondante est devrait donc faire partie de la fonction. Cependant, le
+traitement de la réponse ne devrait pas se trouver dans la fonction car il se
+peut qu'il ne soit pas partout le même. Il serait alors pratique de pouvoir
+renvoyer un résultat, un peu à la manière de `input` justement.
+
 ## Renvoyer un résultat
+
+*Renvoyer* ou *retourner* un résultat s'effectue à l'aide du mot-clé `return` suivit de ce que vous désirez renvoyer. Quelque exemples :
+
+```python
+return True #renverra toujours la même valeur.
+return var #où var est une variable définit précédemment. La valeur renvoyer peut alors être différentes selon les cas
+return input("Sélection: ") #on peut également renvoyer le retour d'une autre fonction.
+```
+
+Notre exemple devient alors :
+
+```python
+def afficheMenu():
+    print("Menu :")
+    print("* Action 1")
+    print("* Action 2")
+
+    return input("Choix: ") #renvoie le choix de l'utilisateur
+```
+
+[[information]]
+| Il faut noter que `return` interrompt la fonction, c'est à dire que tout code
+| se trouvant après un `return` ne sera pas exécuté.
+|
+| ```python
+| return False
+| print("Non") #ne sera pas exécuté
+| ```
+| Il faut cependant noter que :
+|
+| ```python
+| if 'toto' == input():
+|     return False
+| print("Non") #sera exécuté si le texte tapé est différent de 'toto'
+| ```
 
 ## Les paramètres
 
