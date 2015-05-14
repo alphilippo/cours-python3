@@ -71,6 +71,10 @@ afficheMenu()
 
 ## Paramètres optionnels
 
+# La portée des variables
+
+## Les variables globales
+
 # Les fonctions anonymes
 
 # Les paramètres
