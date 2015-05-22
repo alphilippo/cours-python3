@@ -173,10 +173,28 @@ En effet, vous *devez* passer à votre fonction le nombre de paramètre attendu
 par celle-ci. C'est pourquoi le deuxième appel a retourné une erreur : nous
 n'avons passé qu'un seul paramètre au lieu de deux. Dans le cas de notre
 fonction, cela semble logique car pour faire une addition, nous avons besoin de
-deux valeurs.
-
+deux valeurs. Cependant, ce comportement peut être parfois génant. Imaginons la
+fonction `saluer` qui prend en paramètre le nom de la personne à saluer. Il
+serait pratique de pouvoir l'appeler sans paramètre dans le cas où nous ne
+connaissons pas le nom de l'utilisateur. Nous allons voir comment réaliser une
+telle fonction.
 
 ## Paramètres optionnels
+
+Reprenons notre fonction :
+
+```python
+def saluer(nom):
+    print('Bonjour '+nom)
+```
+Nous allons maintenant rendre le paramètre `nom` *optionnel*. Pour ce faire, on
+utilise la syntaxe `param = valeur` dans la définition de la fonction, où
+`valeur` est la *valeur par défaut* du paramètre. Un exemple :
+
+```python
+def saluer(nom = 'Visiteur'):
+    print('Bonjour '+nom)
+```
 
 # La portée des variables
 
