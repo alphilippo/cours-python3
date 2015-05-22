@@ -132,8 +132,8 @@ choix = affiche_menu()
 ## Les paramètres
 
 Vous commencez maintenant à avoir plusieurs fonctions mais certaines d'entre
-elles ont des comportements très semblables. Par exemple, supposons que vous
-avez une fonction `dire_bonjour` et une autre `dire_au_revoir`. Vous voulez
+elles ont des comportements très semblables. Par exemple, supposons que nous
+avons une fonction `dire_bonjour` et une autre `dire_au_revoir`. Vous voulez
 maintenant créer une fonction `dire_une_blague`. Toutes ces fonctions se
 ressemble au niveau de leur code et ne diffèrent que peu. Il semble alors que
 nous soyons à nouveau en train d'effectuer des copier-coller.
@@ -150,11 +150,30 @@ dire('Bonjour') #affiche `# Bonjour`
 dire('Au revoir') #affiche `# Au revoir`
 ```
 
-Ainsi, nous pouvons nous débarasser des fonctions `dire_bonjour` et
+Ainsi, nous pouvons nous débarrasser des fonctions `dire_bonjour` et
 `dire_au_revoir` et n'avoir plus qu'une seule fonction. On dit que `texte` est
-un paramètre. Une fois dans le corps de votre fonction `texte` peut être utlisé
+un paramètre. Une fois dans le corps de votre fonction `texte` peut être utilisé
 comme une variable ordinaire : vous pouvez lui appliquer des conditions, la
 modifier, la passer en paramètre à une autre fonction, ...
+
+Vous pouvez avoir plusieurs paramètres pour une seule fonction. IL vous suffit
+de les séparer par des virgules dans la déclaration de votre variable :
+
+```python
+def addition(a,b):
+    return a+b
+
+addition(10,5) #renvoie 15
+addition(10) #renvoie une erreur
+```
+
+> TODO: faire un run sous python pour récupérer le  message d'erreur exact.
+
+En effet, vous *devez* passer à votre fonction le nombre de paramètre attendu
+par celle-ci. C'est pourquoi le deuxième appel a retourné une erreur : nous
+n'avons passé qu'un seul paramètre au lieu de deux. Dans le cas de notre
+fonction, cela semble logique car pour faire une addition, nous avons besoin de
+deux valeurs.
 
 
 ## Paramètres optionnels
