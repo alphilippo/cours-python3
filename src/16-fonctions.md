@@ -123,6 +123,12 @@ def affiche_menu():
 > print("Non") #sera exécuté si le texte tapé est différent de 'toto'
 > ```
 
+On obtient alors :
+
+```python
+choix = affiche_menu()
+```
+
 ## Les paramètres
 
 ## Paramètres optionnels
