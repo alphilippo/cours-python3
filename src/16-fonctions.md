@@ -131,6 +131,32 @@ choix = affiche_menu()
 
 ## Les paramètres
 
+Vous commencez maintenant à avoir plusieurs fonctions mais certaines d'entre
+elles ont des comportements très semblables. Par exemple, supposons que vous
+avez une fonction `dire_bonjour` et une autre `dire_au_revoir`. Vous voulez
+maintenant créer une fonction `dire_une_blague`. Toutes ces fonctions se
+ressemble au niveau de leur code et ne diffèrent que peu. Il semble alors que
+nous soyons à nouveau en train d'effectuer des copier-coller.
+
+C'est alors qu'entrent en scène les paramètres. Ceux-ci permettent de *passer en
+argument* des informations variables à votre fonction pour que celle-ci puisse
+modifier son comportement. Voici un exemple pour y voir plus clair :
+
+```python
+def dire(texte):
+    print('# '+texte)
+
+dire('Bonjour') #affiche `# Bonjour`
+dire('Au revoir') #affiche `# Au revoir`
+```
+
+Ainsi, nous pouvons nous débarasser des fonctions `dire_bonjour` et
+`dire_au_revoir` et n'avoir plus qu'une seule fonction. On dit que `texte` est
+un paramètre. Une fois dans le corps de votre fonction `texte` peut être utlisé
+comme une variable ordinaire : vous pouvez lui appliquer des conditions, la
+modifier, la passer en paramètre à une autre fonction, ...
+
+
 ## Paramètres optionnels
 
 # La portée des variables
@@ -138,7 +164,5 @@ choix = affiche_menu()
 ## Les variables globales
 
 # Les fonctions anonymes
-
-# Les paramètres
 
 # TP : Calcul Fractionnaire
