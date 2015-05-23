@@ -164,10 +164,16 @@ def addition(a,b):
     return a+b
 
 addition(10,5) #renvoie 15
-addition(10) #renvoie une erreur
+addition(10)
 ```
 
-> TODO: faire un run sous python pour récupérer le  message d'erreur exact.
+Le dernier appel renvoie l'erreur suivante :
+
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: addition() missing 1 required positional argument: 'b'
+```
 
 En effet, vous *devez* passer à votre fonction le nombre de paramètre attendu
 par celle-ci. C'est pourquoi le deuxième appel a retourné une erreur : nous
@@ -194,7 +200,16 @@ utilise la syntaxe `param = valeur` dans la définition de la fonction, où
 ```python
 def saluer(nom = 'Visiteur'):
     print('Bonjour '+nom)
+
+saluer('Clem') #affiche `Bonjour Clem`
+saluer() #affiche `Bonjour Visiteur`
 ```
+
+Vous pouvez ajoutez plusieurs paramètres optionnels et même combiner paramètres
+optionnels et obligatoires. La seule condition est que tout vos paramètres
+obligatoires doivent se trouver au début, et tout ceux facultatifs à la fin de
+la signature, par exemple `def fonction(a, b, c = 1)` et non `def fonction(a, c
+= 1, b)`.
 
 # La portée des variables
 
