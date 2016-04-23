@@ -4,6 +4,10 @@ Ce dépôt héberge temporairement les sources du cours « *Python 3 pour l'app
 sorcier* », destiné à devenir le cours Python de référence du site [Zeste de
 Savoir](http://zestedesavoir.com).
 
+Ce brouillon est consultable en ligne [à cette
+adresse](http://cours-python3.readthedocs.org/fr/latest/index.html)
+
+
 Toute remarque de fond est évidemment la bienvenue.
 
 ## Installation
