@@ -1,4 +1,6 @@
-# Branchements conditionnels
+Branchements conditionnels
+==========================
+
 
 > -- Quarante-deux ! cria Loonquawl. Et c'est tout ce que t'as à nous montrer au
 > bout de sept millions et demi d'années de boulot ?
@@ -55,7 +57,7 @@ vous montrer ici la méthode qui marchera chez tout le monde.
 Ouvrez le programme IDLE livré avec Python. Vous devriez voir apparaître une
 fenêtre dans le style de la figure 1.
 
-![La console IDLE](src/img/idle.png)
+![La console IDLE](img/idle.png)
 
 Puis cliquez sur `File -> New File` ou bien appuyez simultanément sur les
 touches `<Ctrl>` et `<N>`.
@@ -65,7 +67,7 @@ Ceci devrait faire apparaître une fenêtre vide dans laquelle vous pouvez écri
 un programme en Python. Recopiez dedans notre programme d'exemple, comme sur
 la figure 2.
 
-![Notre programme d'exemple](src/img/programme_motdepasse.png)
+![Notre programme d'exemple](img/programme_motdepasse.png)
 
 Enfin, exécutez ce programme en appuyant sur la touche `<F5>`. IDLE va vous
 demander si vous souhaîtez sauvegarder ce fichier au passage, enregistrez-le en
@@ -73,7 +75,7 @@ lui donnant l'extension `.py`, par exemple sous le nom `motdepasse.py`. Une
 fois ceci fait, le programme se lance dans la console interactive, comme sur la
 figure 3.
 
-![Exécution](src/img/execution.png)
+![Exécution](img/execution.png)
 
 Essayez d'exécuter plusieurs fois ce programme avec des mots de passe
 différents, puis essayez avec le bon : abracadabra. Comme vous pouvez le

@@ -1,0 +1,4 @@
+*.swp
+.ropeproject
+_build
+venv

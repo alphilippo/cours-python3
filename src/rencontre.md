@@ -1,4 +1,5 @@
-# Rencontre du troisième type
+Rencontre du troisième type
+===========================
 
 > Le renard se tut et regarda longtemps le petit prince :
 >

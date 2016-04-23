@@ -1,4 +1,6 @@
-# Des noms et des objets
+Des noms et des objets
+======================
+
 
 > *Brisingr* signifie *feu*. C'*est* le feu. La chose est le mot. Connais le
 > mot, tu domineras la chose.
@@ -227,7 +229,7 @@ séparer les mots d'un *underscore*. Ainsi, préférez `pos_joueur` à `PosJoueu
 Vous vous direz sûrement que certaines de ces règles relèvent « des goûts et
 des couleurs ». Sachez qu'en Python, il existe une norme qui décrit les
 *conventions de nommage* et que la grande majorité des développeurs Python la
-respectent. 
+respectent.
 
 Cette norme est la [PEP-08](https://www.python.org/dev/peps/pep-0008/). La
 respecter n'est pas obligatoire, mais vous pouvez être sûr que la remarque vous
@@ -442,7 +444,7 @@ SyntaxError: EOL while scanning string literal
 > *Et si je veux écrire une chaîne qui fasse plusieurs lignes ?*
 
 Pour cela, vous avez encore deux alternatives. La première et... d'accord,
-j'arrête avec cette blague. 
+j'arrête avec cette blague.
 
 La première alternative, c'est d'utiliser le caractère spécial `\n`, qui
 représente un *retour à la ligne*.
@@ -468,7 +470,7 @@ l'affichage correspond bien à ce que nous voulions.
 La seconde alternative, c'est d'entourer notre chaîne avec des *triples
 guillemets* (`"""`) ou des *triples apostrophes*.
 
-Essayons : 
+Essayons :
 
 ```python
 >>> """voici une chaîne
@@ -518,7 +520,7 @@ Bonjour !
 >>> x = 2 + 2
 >>> print("x =", x)
 x = 4
-``` 
+```
 
 Cette fois, nous avons passé *un argument* à la fonction `print` (la chaîne
 `"Bonjour !"`), et le résultat affiché est le contenu de cette chaîne. Puis
@@ -555,7 +557,7 @@ la créer), alors que si je l'affiche avec `print(ma_chaine)`, Python affiche
 supprimant les guillemets.
 
 Voyons maintenant une autre fonction utile : `type()`. Cette fonction
-retourne le type de l'objet qu'on lui passe en argument : 
+retourne le type de l'objet qu'on lui passe en argument :
 
 ```python
 >>> type(42)
@@ -579,7 +581,7 @@ qu'un type et une classe sont exactement la même chose en Python.
 
 Il peut être intéressant de remarquer qu'à chacun des trois types de base que
 nous connaissons correspond une fonction du même nom. Essayez de deviner, grâce
-à l'exemple suivant, à quoi servent ces fonctions : 
+à l'exemple suivant, à quoi servent ces fonctions :
 
 ```python
 >>> entier = 42
@@ -605,7 +607,7 @@ chaînes de caractères à partir d'autres objets.
 Dernière remarque. Quelle autre différence peut-on observer entre ces trois
 fonctions et la fonction `print()` ?
 
-Regardez cet exemple : 
+Regardez cet exemple :
 
 ```python
 >>> a = str(42.512)
@@ -619,9 +621,9 @@ Coucou
 
 Dans cet exemple, j'ai transformé le nombre `42.512` en une chaîne de
 caractères que j'ai affecté à la variable `a`. En somme, j'ai affecté *le
-résultat* de `str(42.512)` à une variable. 
+résultat* de `str(42.512)` à une variable.
 
-Puis j'ai essayé d'affecter le résultat de `print("Coucou")` à la variable `b`. 
+Puis j'ai essayé d'affecter le résultat de `print("Coucou")` à la variable `b`.
 Comme prévu, l'appel à `print()` a affiché la chaîne `Coucou` à l'écran mais la
 variable `b`... ne contient rien du tout, même si elle existe !
 
@@ -643,7 +645,7 @@ Non, sérieusement, *faites-les*. Le seul moyen pour vous de retenir ce que vous
 venez de lire et que votre apprentissage soit utile, c'est de réveiller votre
 cerveau et d'être actif.
 
-Soient les variables suivantes : 
+Soient les variables suivantes :
 
 ```python
 >>> x = 38
@@ -659,7 +661,7 @@ Je vous demande simplement de créer les quatres variables qui suivent :
 
 En guise de second exercice, je vous demande de trouver un moyen de
 **permuter** ces deux variables. C'est-à-dire écrire du code tel que vous
-obteniez dans la console le résultat suivant : 
+obteniez dans la console le résultat suivant :
 
 ```python
 >>> x
@@ -670,7 +672,7 @@ obteniez dans la console le résultat suivant :
 
 Ne trichez pas ! `x, y = 54, 38` n'est pas une solution valide. ;)
 
-Votre code doit permuter ces deux variables quelles que soient leurs valeurs. 
+Votre code doit permuter ces deux variables quelles que soient leurs valeurs.
 À titre d'indication, il existe deux solutions : la première en trois
 instructions, la seconde en une seule ligne.
 
@@ -679,7 +681,7 @@ Bonne chance !
 ## Ce qu'il faut retenir
 
 Nous avons vu beaucoup de choses dans ce chapitre. Voici ce que vous devriez en
-retenir : 
+retenir :
 
 * Une variable, c'est une *étiquette* que l'on colle sur un objet pour lui
   donner un *nom*,
@@ -687,7 +689,7 @@ retenir :
   Python se souviendra de lui,
 * Le *type* d'un objet, c'est ce qui décrit sa nature : à quoi il ressemble,
   comment on l'utilise, etc.
-* Vous connaissez quatre types d'objets différents : 
+* Vous connaissez quatre types d'objets différents :
     * Les `int` sont les nombres entiers.
     * Les `float` sont les nombres à virgule.
     * Les `str` sont les chaînes de caractères ; elles contiennent du *texte*.

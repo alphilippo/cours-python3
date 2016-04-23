@@ -1,20 +1,3 @@
----
-title: Python 3 pour l'apprenti sorcier
-author: "Arnaud Calmettes (nohar)"
-date: \today
-papersize: a4paper
-documentclass: scrreprt
-classoption:
-    - 11pt
-header-includes:
-    - \usepackage[left=2cm, right=2cm, bottom=3cm]{geometry}
-    - \usepackage{fancyhdr}
-    - \pagestyle{fancy}
-    - \usepackage[french]{babel}
-...
-
-# Avant-propos {.unnumbered}
-
 Vous désirez vous initier à l'art de la programmation, et je vous en félicite.
 
 Vous ne vous en doutez peut-être pas, mais vous êtes sur le seuil d'un nouveau

@@ -1,3 +1,6 @@
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
-International License. To view a copy of this license, visit
-[http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
+Licence
+=======
+
+Cette œuvre est mise à disposition selon les termes de la
+[Licence Creative Commons Attribution - Partage dans les Mêmes Conditionse 4.0
+International](http://creativecommons.org/licence/by-sa/4.0).
