@@ -319,6 +319,65 @@ La ligne la plus importante est la dernière, qui signifie, littéralement :
 sa part, remarquez : Python nous explique exactement ce qui le gêne au lieu de
 se contenter de râler.
 
+### La construction `if`/`elif`/`else`
+
+Pour compléter notre exemple, il nous faut encore expliquer à quoi sert le
+mot-clé `else`. Celui-ci signifie *sinon*, et introduit un bloc qui sera
+exécuté *si le prédicat est faux*, donc que la condition n'a pas été remplie.
+
+Par exemple :
+
+```python
+>>> age = 16
+>>> if age >= 18:                  # La condition n'est pas remplie,
+...    print('Vous êtes majeur.')  # Ce bloc ne sera pas exécuté,
+... else:
+...    print('Vous êtes mineur.')  # Mais celui-ci, oui.
+```
+
+Imaginons maintenant un programme un petit peu plus alambiqué, dans lequel on
+distingue trois cas :
+
+* L'utilisateur est mineur,
+* Ou bien il a 18 ans tout pile,
+* Ou bien il est majeur.
+
+On pourrait le coder comme ceci, en empilant une nouvelle condition dans le
+bloc `else` :
+
+```python
+if age < 18:
+    print('Mineur')
+else:
+    if age > 18:
+        print('Majeur')
+    else:
+        print('18 ans tout pile')
+```
+
+Et cela fonctionnerait tout à fait. Déroulez tous les cas possible dans votre
+tête ou dans votre console, et vous le constaterez comme moi.
+
+Cela dit, ce `else if` est un peu difficile à lire. Python propose donc un
+mot-clé qui sert exactement à enchaîner les cas alternatifs de ce style. J'ai
+nommé `elif` :
+
+```python
+if age < 18:
+    print('Mineur')
+elif age > 18:
+    print('Majeur')
+else:
+    print('18 ans tout pile !')
+```
+
+Avouez que c'est plus lisible, d'autant plus que dans cette construction, il
+est possible d'enchaîner autant de clauses `elif` que vous le souhaitez.
+
+À titre d'exercice, reprenez l'exemple du mot de passe, mais faites en sorte
+qu'il accepte 3 mots de passe différents, en vous servant de cette construction
+`if`/`elif`/`else`.
+
 ## Aller plus loin
 
 ### Opérateurs logiques
