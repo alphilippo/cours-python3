@@ -210,21 +210,13 @@ séparer les mots d'un *underscore*. Ainsi, préférez `pos_joueur` à `PosJoueu
 * Certains mots-clés de Python sont *réservés*, c'est-à-dire que **vous ne pouvez
   pas créer des variables portant ce nom**. En voici la liste pour Python 3 :
 
-+----------+---------+--------+----------+-------+
-|`and`     |`del`    |`from`  |`None`    |`True` |
-+----------+---------+--------+----------+-------+
-|`as`      |`elif`   |`global`|`nonlocal`|`try`  |
-+----------+---------+--------+----------+-------+
-|`assert`  |`else`   |`if`    |`not`     |`while`|
-+----------+---------+--------+----------+-------+
-|`break`   |`except` |`import`|`or`      |`with` |
-+----------+---------+--------+----------+-------+
-|`class`   |`False`  |`in`    |`pass`    |`yield`|
-+----------+---------+--------+----------+-------+
-|`continue`|`finally`|`is`    |`raise`   |       |
-+----------+---------+--------+----------+-------+
-|`def`     |`for`    |`lambda`|`return`  |       |
-+----------+---------+--------+----------+-------+
+    and        del       from     None       True
+    as         elif      global   nonlocal   try
+    assert     else      if       not        while
+    break      except    import   or         with
+    class      False     in       pass       yield
+    continue   finally   is       raise
+    def        for       lambda   return
 
 Vous vous direz sûrement que certaines de ces règles relèvent « des goûts et
 des couleurs ». Sachez qu'en Python, il existe une norme qui décrit les
