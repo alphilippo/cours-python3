@@ -1,3 +1,6 @@
+Avant-propos
+============
+
 Vous désirez vous initier à l'art de la programmation, et je vous en félicite.
 
 Vous ne vous en doutez peut-être pas, mais vous êtes sur le seuil d'un nouveau
